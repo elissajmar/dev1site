@@ -1,0 +1,54 @@
+body {
+    background-color: var(--grey);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
+    width: 100%;
+    height: 100vh;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero img {
+    width: 50%; 
+}
+
+h1 {
+    line-height: 100%;
+}
+
+/* Black image section */
+.image {
+    overflow: hidden;
+    background-color: black;
+}
+
+.image img {
+    width: 100%;
+    opacity: 30%;
+}
+
+/* Features section */
+.features {
+    background-color: var(--orange);
+    padding: 40px;
+
+    color:white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.feature h2{
+    line-height: 0;
+}

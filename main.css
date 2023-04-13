@@ -1,0 +1,48 @@
+/* This is the css file that defines all the overall styling for the whole website */
+
+/*COLORS*/
+/* If we define the main brand colors here, we can use them later, 
+   just say "color: var(--orange)" */
+
+:root {
+    --orange: #E94F1D; /* This is the main accent orange*/
+    --grey: #DEDAD5;  /* This is the background grey */
+}
+
+/* FONT & SIZES */
+/* Predefined universal font style*/
+
+@font-face { /* Adding our custom fonts */
+    font-family: 'Compacta';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/compacta-bt/Compctan.ttf');
+}
+
+@font-face { /*Adding our custom fonts*/
+    font-family: 'Neue Haas Grotesk';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf');
+}
+
+h1 { /* biggest home text size */
+    font-size: 20rem;
+    font-family: Compacta;
+}
+
+h2 { /* use for page titles */
+    font-size: 8rem;
+    font-family: Compacta;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+body {
+    margin: 0; /* Gets rid of that annoying white border around the body */
+
+    font-family: Neue Haas Grotesk;
+}
