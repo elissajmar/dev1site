@@ -23,9 +23,9 @@
 
 @font-face { /*COMPACTA*/
     font-family: 'Compacta';
-    font-style: normal;
-    font-weight: normal;
-    src: url('assets-fonts/compacta-bt/Compctan.ttf');
+    font-style: roman;
+    font-weight: 1000;
+    src: url('assets-fonts/compacta-bt/CompactaBT.ttf');
 }
 
 /*NEUE HAAS NORMAL*/
