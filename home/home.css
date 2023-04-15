@@ -5,9 +5,16 @@ body {
     flex-direction: column;
 }
 
-.section { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
+.screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
     width: 100%;
     height: 100vh;
+}
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 /* Hero section */
@@ -31,6 +38,8 @@ h1 {
 .image {
     overflow: hidden;
     background-color: black;
+    position: relative;
+    text-align: right;
 }
 
 .image img {
@@ -38,10 +47,24 @@ h1 {
     opacity: 30%;
 }
 
+.text{
+    height: 100vh;
+    width: 90%;
+    
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.text h3 {
+    color: white;
+}
+
 /* Features section */
 .features {
     background-color: var(--orange);
-    padding: 40px;
 
     color:white;
 
@@ -49,6 +72,30 @@ h1 {
     flex-direction: column;
 }
 
+.feature {
+    display: flex;
+    gap: 120px;
+}
+
 .feature h2{
     line-height: 0;
+}
+
+.featureImg {
+    width: 200px;
+}
+
+/*Socials section*/
+.social{
+}
+
+.feed{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feed img{
+    width: 23%;
 }

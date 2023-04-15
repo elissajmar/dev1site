@@ -9,22 +9,41 @@
     --grey: #DEDAD5;  /* This is the background grey */
 }
 
+.orange { /* feel free to just add this class "orange" to any text you want to be orange) */
+    color: var(--orange);
+}
+
+.grey { /* same goes for grey */
+    color: var(--grey);
+}
+
+
 /* FONT & SIZES */
 /* Predefined universal font style*/
 
-@font-face { /* Adding our custom fonts */
+@font-face { /*COMPACTA*/
     font-family: 'Compacta';
     font-style: normal;
     font-weight: normal;
-    src: url('fonts/compacta-bt/Compctan.ttf');
+    src: url('assets-fonts/compacta-bt/Compctan.ttf');
 }
 
-@font-face { /*Adding our custom fonts*/
+/*NEUE HAAS NORMAL*/
+@font-face {
     font-family: 'Neue Haas Grotesk';
     font-style: normal;
     font-weight: normal;
-    src: url('fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf');
+    src: url('assets-fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf');
 }
+
+/*NEUE HAAS BOLD*/
+@font-face { 
+    font-family: 'Neue Haas Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    src: url('assets-fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf');
+}
+
 
 h1 { /* biggest home text size */
     font-size: 20rem;
@@ -36,8 +55,9 @@ h2 { /* use for page titles */
     font-family: Compacta;
 }
 
-h3 {
-    font-size: 2rem;
+h3 { 
+    font-size: 5rem;
+    font-family: Compacta;
 }
 
 
@@ -45,4 +65,81 @@ body {
     margin: 0; /* Gets rid of that annoying white border around the body */
 
     font-family: Neue Haas Grotesk;
+}
+
+/*NAV*/
+.nav{
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* keeps nav bar at the top always */
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.logo{
+    font-family: Compacta;
+}
+
+.navLabel{
+    font-size: 16px;
+    text-decoration: none;
+    color: black; 
+}
+
+a{
+    display: inline-block;
+    position: relative;
+}
+
+/*Just some animation stuff*/
+a:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+
+a.underline:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 200px;
+    padding-bottom: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+
+    color: white;
+    background-color: black;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
 }
