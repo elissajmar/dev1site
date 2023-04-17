@@ -1,0 +1,53 @@
+body{
+    background-color: #DEDAD6;
+}
+
+#outercontainer{
+    width: 100%;
+}
+
+#bigpicture {
+    border: solid;
+    background-image: url("team.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 6%;
+    height: 90%;
+    text-align: center;
+}
+
+#text {
+    text-align: center;
+    padding: 5%;    
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: left;
+    margin-bottom: -4%;
+}
+
+#theteambox {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#teamflex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+    .profilebox {
+        width: 175px;
+        height: 225px;
+        border: solid;
+        margin: 3%;
+        text-align: center;
+    }
+
+    .profile {
+        width: 175px;
+        height: 175px;
+    }
+
