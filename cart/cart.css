@@ -1,0 +1,107 @@
+body{
+    background-color: var(--grey);
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color:black;
+}
+#top, #bottom, .summary{
+    border-radius: 20px;
+}
+.cartFlex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    /* margin-top: 200px; */
+    margin-bottom: 50px;
+    /* margin-right: 20%; */
+    justify-content: space-evenly;
+    /* background-color: black;  */
+    width: 70vw;
+}
+.leftCart{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}
+.summary{
+    flex-grow: 3;
+    padding: 20px;
+    background-color: #D9D9D9;
+    margin-left: 5px;
+    max-height: max-content;
+}
+#top{
+    flex-shrink: 1;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #D9D9D9;
+}
+#bottom{
+    flex-grow: 4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #D9D9D9;
+}
+/* #cartSection{
+display: flex;
+flex-direction: row;
+} */
+.sectionTitle{
+    color: var(--orange);
+}
+.title{
+    margin-top: 8%;
+    margin-left: 15%;
+}
+#shipping{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#signUp{
+    text-decoration: underline;
+}
+.cartImage{
+    width: 100px;
+    height: 100px;
+}
+.cartImage img{
+    width: 100%;
+}
+.cartInfo{
+    color: rgb(79, 79, 79);
+}
+/* .itemName{
+    font-weight: 600;
+} */
+#summary{
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: 800;
+}
+input[type=button]{
+    background-color: var(--orange);
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px;
+}
+#promoCode{
+    border-radius: 8px;
+    border: 0px;
+    background-color: white;
+    height: 25px;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

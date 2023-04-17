@@ -51,7 +51,7 @@ h1 { /* biggest home text size */
 }
 
 h2 { /* use for page titles */
-    font-size: 8rem;
+    font-size: 6rem;
     font-family: Compacta;
 }
 
@@ -60,11 +60,34 @@ h3 {
     font-family: Compacta;
 }
 
+.noLineHeight { /*gets rid of the extra spacing above and below the text*/
+    line-height: 0;
+}
+
 
 body {
     margin: 0; /* Gets rid of that annoying white border around the body */
 
     font-family: Neue Haas Grotesk;
+}
+
+/* BUTTONS */
+.button {
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 80px;
+    background-color: var(--orange);
+}
+
+
+.button a {
+    text-decoration: none;
+    color: white;
+    line-height: 0;
+    font-weight: bold;
 }
 
 /*NAV*/
@@ -187,4 +210,26 @@ input[type=text]{
 input[type=text]::placeholder{
     color: rgb(255, 255, 255);
     opacity: 60%;
+}
+
+
+/* MOBILE RESIZING */
+@media screen and (max-width: 760px){
+    /*FONT RESIZING*/
+    h1 {
+        font-size: 10rem;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    h3{
+        font-size: 3rem;
+    }
+
+
+    .nav {
+        gap: 10px;
+    }
 }
