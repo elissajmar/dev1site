@@ -60,6 +60,10 @@ h3 {
     font-family: Compacta;
 }
 
+.noLineHeight { /*gets rid of the extra spacing above and below the text*/
+    line-height: 0;
+}
+
 
 body {
     margin: 0; /* Gets rid of that annoying white border around the body */

@@ -1,0 +1,28 @@
+body {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+h1{
+    color: rgb(209, 9, 126);
+}
+
+.member {
+    width: 60%;
+    padding: 40px;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
