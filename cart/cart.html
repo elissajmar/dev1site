@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+
+    <!---->
+    <link rel="stylesheet" href="../main.css"> <!--References the css file for this page specifically -->
+    <link rel="stylesheet" href="cart.css"> <!--References the css file for this page specifically -->
+    
+
+    <!--Adding jQuery and scripting-->
+    <script src="http://code.jquery.com/jquery.js"></script> 
+    <script src="../main.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="nav">
+        <a class="navLabel underline" href="#">HOME</a>
+        
+        <a class="navLabel underline" href="../products/products.html">PRODUCTS</a>
+        
+        <p class="logo orange">STRATAGYM</p>
+
+        <a class="navLabel underline" href="../about/about.html">ABOUT</a>
+
+        <a class="navLabel underline" href="../contact/contact.html">CONTACT</a>
+
+    </div>
+
+    <!-- <div class="title">
+        <h2>Cart</h2>
+    </div> -->
+
+    <div class="cartFlex"> <!--flex container-->
+        
+        <div class="leftCart"> <!--left side of the page including the actual cart-->
+ 
+           <div id="top"> <!--section on top of actual cart items-->
+                <p>
+                    <span class="sectionTitle" id="shipping">
+                    Free shipping for members
+                    </span> 
+                </br>
+                    Become a member for free shipping. <a href="#" id="signUp">Sign-up</a> now.
+                </p>
+            </div>
+
+            <div id="bottom">
+                
+                <div class="cartImage">
+                    <img src="../home/assets/bag.png" alt="blue bag">
+                </div>
+                <div class="cartInfo">
+                    <p>
+                    <span class="itemName">Bottom Bag<span>
+                    </br>
+                    Black
+                    </br>
+                    Quantiity ~
+                    </p>
+                </div>
+
+               
+
+            </div>
+        
+        </div><!--end of leftCart-->
+
+        <div class="summary">
+            <span id="summary">Summary</span>
+            <p>
+                Promo Code
+                <input type="text">
+                <input type="button" value="APPLY">
+            </p>
+
+            <p>
+                Promo Code
+            </br>
+                Shipping and Handiling
+            </br>
+                Estimated Tax
+            </p>
+            <hr>
+            <p>
+                Total
+            </p>
+            <hr>
+        </div>
+        
+    </div> <!--end of flex container-->
+</br>
+<hr style="width: 85vw; margin:auto">
+</br></br>
+
+<!-- FOOTER SECTION -->
+<div class="footer">
+    <div class="footertext">
+        <a href="">stratagym@usc.edu</a> <br/>
+        <a href="https://instagram.com/_stratagym">Instagram</a>
+    </div>
+    <div class="email">
+        <h3>GET THAT <span class="orange">BAG</span>.</h3><br/>
+    </div>
+    <div>
+        <form>
+            <input type="text" name="name" placeholder="full name" required/>
+            <input type="text" name="email" id="email" placeholder="you@email" required/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
