@@ -14,8 +14,8 @@ a:link{
     display: flex;
     flex-direction: row;
     margin-left: 15%;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    /* margin-top: 200px; */
+    margin-bottom: 50px;
     /* margin-right: 20%; */
     justify-content: space-evenly;
     /* background-color: black;  */
@@ -59,6 +59,10 @@ flex-direction: row;
 } */
 .sectionTitle{
     color: var(--orange);
+}
+.title{
+    margin-top: 8%;
+    margin-left: 15%;
 }
 #shipping{
     font-weight: 700;
