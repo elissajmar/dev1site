@@ -34,6 +34,10 @@ h1 {
     line-height: 100%;
 }
 
+.noLineHeight {
+    line-height: 0;
+}
+
 /* Black image section */
 .image {
     overflow: hidden;
@@ -87,6 +91,9 @@ h1 {
 
 /*Socials section*/
 .social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .feed{
@@ -98,4 +105,41 @@ h1 {
 
 .feed img{
     width: 23%;
+}
+
+
+/* TABLET/MOBILE RESIZING */
+@media screen and (max-width: 760px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* IMAGE */
+    .image img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* FEATURES */
+    .features { 
+        gap: 80px;
+    }
+
+    .feature{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    /* INSTA FEED */
+
+    .feed img{
+        width: 47%;
+    }
+
+    .noLineHeight {
+        line-height: 100%;
+    }
 }
