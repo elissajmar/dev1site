@@ -92,7 +92,7 @@ input[type=button]{
     border: 0px;
     padding: 5px;
 }
-input[type=text]{
+#promoCode{
     border-radius: 8px;
     border: 0px;
     background-color: white;
