@@ -7,7 +7,6 @@ body{
 }
 
 #bigpicture {
-    border: solid;
     background-image: url("team.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -28,22 +27,25 @@ body{
 #theteambox {
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: -5%;
 }
 
-#teamflex {
+.teamflex {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-left: 35%;
+    padding-right: 35%;
+    margin-top: -5%;
+    margin-bottom: 6%;
 }
 
     .profilebox {
         width: 175px;
         height: 225px;
-        border: solid;
         margin: 3%;
-        text-align: center;
+        text-align: center; 
     }
 
     .profile {
