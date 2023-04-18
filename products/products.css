@@ -10,7 +10,7 @@ body{
    }
    
    .text {
-    margin-left: 100px;
+    margin-left: 8vw;
    }
 
 h3{
@@ -21,7 +21,7 @@ h3{
 }
 
 .description{
-    width: 500px;
+    width: 30vw;
 }
 
 .price{
@@ -89,4 +89,13 @@ background-color: #717171;
 
 .spacing{
     margin-bottom: 100px;
+}
+
+/* MOBILE RESIZING */
+@media screen and (max-width: 760px){
+    .slider {
+        width: 250px;
+        height: 250px;
+        position: relative;
+      }
 }
