@@ -64,10 +64,11 @@ h3 {
     line-height: 0;
 }
 
-
 body {
     margin: 0; /* Gets rid of that annoying white border around the body */
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Neue Haas Grotesk;
 }
 
@@ -94,14 +95,20 @@ body {
 .nav{
     padding-top: 20px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    z-index: 100; /* keeps nav bar at the top always */
 
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* keeps nav bar on top always */
+
+    width: 80%;
     position: fixed;
     top: 0;
+    margin: auto;
+}
+
+.navSection {
+    display: flex;
+    gap: 20px;
 }
 
 .logo{
@@ -152,10 +159,12 @@ a.underline:hover:after {
 .footer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
-    padding-top: 50px;
+    padding-top: 200px;
     padding-bottom: 40px;
     padding-left: 10vw;
+    padding-right: 10vw;
 
     color: white;
     background-color: black;
@@ -166,20 +175,24 @@ a.underline:hover:after {
     text-decoration: none;
 }
 
-
 .email{
-    margin-left: 30vw;
-    padding-right: 3vw;
+
 }
 
 .email h3{
     margin: 0;
-    padding:0;
+    padding: 0;
     font-size: 5.5vw;
 }
 
 .footertext{
     padding-top: 15px;
+}
+
+.footerRight{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .orange{
@@ -190,10 +203,12 @@ a.underline:hover:after {
 form{
     display: flex;
     flex-direction: column;
+    
     gap: 3px;
     margin: 0;
     padding: 0;
 }
+
 
 input[type=text]{
     width: 100%;
@@ -202,7 +217,7 @@ input[type=text]{
     border-bottom: 1px solid white;
     color: rgb(255, 255, 255);
 
-    height: 45px;
+    height: 30px;
 
     font-family: Neue Haas Grotesk;
     font-size: 1.25rem;
@@ -235,14 +250,12 @@ input[type=text]::placeholder{
     }
 
     .email h3{
-        padding-top: 20px;
+        display: none;
     }
 
     .footer{
         padding-right: 20px;
     }
-
-
 
     .nav {
         gap: 10px;

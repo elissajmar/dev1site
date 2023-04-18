@@ -6,29 +6,45 @@
         <meta charset="UTF-8">
         
         <!--STYLESHEETS-->
-        <link rel="stylesheet" href="../main.css"> <!--References the css file for this page specifically -->
+        <link rel="stylesheet" href="../main.css"> <!--References the css file defining main styles -->
         <link rel="stylesheet" href="about.css"> <!--References the css file for this page specifically -->
-        
 
         <!--Adding jQuery and scripting-->
         <script src="http://code.jquery.com/jquery.js"></script> 
         <script src="../main.js"></script>
     </head>
-    <body>
     
-        <!-- Navigation Bar -->
-        <div class="nav">
-            <a class="navLabel underline" href="../home/home.html">HOME</a>
-            
-            <a class="navLabel underline" href="../products/products.html">PRODUCTS</a>
-            
+    <body>
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="navSection">
             <p class="logo orange">STRATAGYM</p>
+        </div>
+
+        <div class="navSection">
+            <a class="navLabel underline" href="../home/home.html">HOME</a>
+        
+            <a class="navLabel underline" href="../products/products.html">PRODUCTS</a>
 
             <a class="navLabel underline" href="../about/about.html">ABOUT</a>
 
             <a class="navLabel underline" href="../contact/contact.html">CONTACT</a>
-        </div>
 
+        </div>
+        
+        <div class="navSection">
+            <a class="navLabel underline" href="../cart/cart.html">CART</a>
+        </div>
+    </div>
+
+    <div class="body"> <!-- 
+                            Hi kyler; I had to put everything except for the navbar in its own 
+                            div (I just gave it a class of "body" to help differentiate) since the 
+                            default body is set to flex, and that breaks your code. So just 
+                            edit everything as if this div is the <body> tag! 
+                            -Elissa
+                        --> 
+                    
         <!-- Big Team Image -->
         <div id="bigpicture">
             <h2>OUR STORY</h2>
@@ -106,5 +122,6 @@
                 </form>
             </div>
         </div>
+    </div>
     </body>
 </html>

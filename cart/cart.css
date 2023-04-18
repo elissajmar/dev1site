@@ -13,7 +13,7 @@ a:link{
 .cartFlex{
     display: flex;
     flex-direction: row;
-    margin-left: 15%;
+  
     /* margin-top: 200px; */
     margin-bottom: 50px;
     /* margin-right: 20%; */
@@ -31,7 +31,9 @@ a:link{
 .summary{
     flex-grow: 3;
     padding: 20px;
-    background-color: #D9D9D9;
+    /*background-color: #D9D9D9;   Hi victoria, maybe we could get rid of the grey 
+                                    background here? it kind of clashes with the 
+                                    background color -Elissa */
     margin-left: 5px;
     max-height: max-content;
 }
@@ -40,7 +42,7 @@ a:link{
     margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #D9D9D9;
+    /*background-color: #D9D9D9;*/
 }
 #bottom{
     flex-grow: 4;
@@ -51,7 +53,7 @@ a:link{
     padding: 20px;
     padding-bottom: 30px;
     padding-top: 30px;
-    background-color: #D9D9D9;
+    /* background-color: #D9D9D9; */
 }
 /* #cartSection{
 display: flex;
@@ -62,7 +64,7 @@ flex-direction: row;
 }
 .title{
     margin-top: 8%;
-    margin-left: 15%;
+
 }
 #shipping{
     font-weight: 700;
