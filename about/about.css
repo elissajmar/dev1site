@@ -11,8 +11,15 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 6%;
-    height: 90%;
+    height: 500px;
     text-align: center;
+}
+
+#bigpicture h2 {
+    line-height: 500px; /* If you make the line-height of the text the same 
+                            height as the containing div, it centers the text 
+                            vertically :) -elissa */
+    color: white;
 }
 
 #text {
@@ -25,6 +32,7 @@ body{
 }
 
 #theteambox {
+    padding-left: 50px;
     margin-top: -5%;
 }
 
@@ -33,20 +41,20 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-left: 35%;
-    padding-right: 35%;
+    gap: 20px;
+    flex-wrap: wrap;
+    
     margin-top: -5%;
     margin-bottom: 6%;
 }
 
-    .profilebox {
+.profilebox {
         width: 175px;
         height: 225px;
-        margin: 3%;
         text-align: center; 
 }
 
-    .profile {
+.profile {
         width: 175px;
         height: 175px;
 }
@@ -54,14 +62,20 @@ body{
     
 @media screen and (max-width: 760px){
 
-
     #bigpicture {
         background-image: url("team.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         margin-top: 15%;
-        height: 90%;
+        height: 300px;
         text-align: center;
+    }
+
+    #bigpicture h2 {
+        line-height: 300px; /* If you make the line-height of the text the same 
+                                height as the containing div, it centers the text 
+                                vertically :) -elissa */
+        color: white;
     }
 
     #text {
@@ -70,8 +84,8 @@ body{
         padding-left: 15%;
         padding-right: 15%;
         text-align: left;
-        margin-bottom: -4%;
-        margin-top: -350px;
+
+
     }
 
     #theteambox {
