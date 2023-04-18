@@ -1,5 +1,6 @@
 body{
     background-color: #DEDAD6;
+
 }
 
 #outercontainer{
@@ -25,8 +26,6 @@ body{
 }
 
 #theteambox {
-    padding-left: 10%;
-    padding-right: 10%;
     margin-top: -5%;
 }
 
@@ -46,12 +45,12 @@ body{
         height: 225px;
         margin: 3%;
         text-align: center; 
-    }
+}
 
     .profile {
         width: 175px;
         height: 175px;
-    }
+}
 
     
 @media screen and (max-width: 760px){
@@ -79,8 +78,6 @@ body{
     #theteambox {
         padding-left: 10%;
         padding-right: 10%;
-        margin-top: -5%;
-        width: 100%;
     }
     
     .teamflex {
