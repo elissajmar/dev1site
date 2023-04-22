@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
 
     /* CART FUNCTIONALITY */
-    //localStorage.clear()
+    localStorage.clear()
 
     /* DEFINING PRODUCTS */
     let topBag = { //defines the template for a product with name, price, and quantity
@@ -34,16 +34,25 @@ $(document).ready(function(){
     //on add to cart button click, call add to cart for that specific product
     $(".addtocartTop").click(function(){
         quantity = $("#quantityTop").val()
-        addToCart(topBag, quantity)
-        
-        console.log(cart) //to check
+        if (quantity != ""){ //make sure input isn't blank
+            addToCart(topBag, quantity)
+            console.log(cart) //to check
+        }
+        else {
+            alert("Please enter a valid quantity!")
+        }
     })
 
     $(".addtocartBottom").click(function(){
         quantity = $("#quantityBottom").val()
-        addToCart(bottomBag, quantity)
+        if (quantity != ""){ //make sure input isn't blank
+            addToCart(bottomBag, quantity)
+            console.log(cart) //to check
+        }
 
-        console.log(cart)//to check
+        else {
+            alert("Please enter a valid quantity!")
+        }
     })
 
 
@@ -69,6 +78,7 @@ $(document).ready(function(){
         if (cart.length == 0 ){ //check if cart length is 0, then autoadd 
             console.log("zero")
             product.quantity = quantity;
+            product.id = cart.length; //set an id for the product (for later editing reference)
             cart.push(product)
         }
 
@@ -77,8 +87,7 @@ $(document).ready(function(){
 
             //check if cart already has product
             for (i=0; i<cart.length; i++){   //for the length of the cart
-                if (cart[i].name == product.name){ //if theres a product in the cart already that matches
-                    console.log("yes")
+                if (cart[i].name == product.name){ //if theres a product in the cart already that matches 
                     cart[i].quantity = parseFloat(cart[i].quantity) + quantity; //increment the quantity
                     added = true;
                 }
@@ -86,6 +95,7 @@ $(document).ready(function(){
 
             if (added == false){ //if no match was found
                 product.quantity = quantity; //add a new product to the cart
+                product.id = cart.length;
                 cart.push(product)
             }
         }

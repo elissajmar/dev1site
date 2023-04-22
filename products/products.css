@@ -97,8 +97,13 @@ background-color: #717171;
     border-radius: 30px;
 }
 
+.addtocartBottom:hover {
+    background-color: white;
+    color: var(--orange);
+    transition: 0.2s;
+}
 
-.addtocart:hover{
+.addtocartTop:hover {
     background-color: white;
     color: var(--orange);
     transition: 0.2s;

@@ -13,6 +13,9 @@
     <!--Adding jQuery and scripting-->
     <script src="http://code.jquery.com/jquery.js"></script> 
     <script src="../main.js"></script>
+    <script src="cart.js"></script>
+    
+
 </head>
 <body>
     <!-- NAVBAR -->
@@ -41,6 +44,10 @@
         <h2>CART</h2>
     </div>
 
+    <div class="promoCodeAd">
+        We're celebrating our launch! Use "BAG20" to get 20% off your order!
+    </div>
+
     <div class="cartFlex"> <!--flex container-->
         
         <div class="leftCart"> <!--left side of the page including the actual cart-->
@@ -56,46 +63,38 @@
             </div>
 
             <div id="bottom">
-                
-                <div class="cartImage">
-                    <img src="../home/assets/bag.png" alt="blue bag">
-                </div>
-                <div class="cartInfo">
-                    <p>
-                    <span class="itemName">Bottom Bag<span>
-                    </br>
-                    Black
-                    </br>
-                    Quantiity ~
-                    </p>
-                </div>
+                <div class="cart">
 
-               
-
+                    <!-- JS filled cart-->
+                </div>
             </div>
         
         </div><!--end of leftCart-->
 
         <div class="summary">
             <span id="summary">Summary</span>
-            <p>
-                Promo Code
+           
+            <div>
+                Promo Code <br />
                 <input id="promoCode" type="text">
-                <input type="button" value="APPLY">
-            </p>
+                <input id="applyPromo" type="button" value="APPLY">
+            </div>
+            <br /> 
 
-            <p>
-                Promo Code
-            </br>
-                Shipping and Handiling
-            </br>
-                Estimated Tax
-            </p>
-            <hr>
-            <p>
-                Total
-            </p>
-            <hr>
+            <div id="promoSummary">
+                Promo Code: 
+            </div>
+            <div>
+                Shipping and Handling: $4.99
+            </div>
+            <div>
+                Estimated Tax: $4.99
+            </div>
+            <hr />
+            <div class="priceTotal">
+                Total: 
+            </div>
+            <hr />
         </div>
         
     </div> <!--end of flex container-->
