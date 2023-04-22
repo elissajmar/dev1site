@@ -8,12 +8,15 @@
 
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="products.css">
+
+    <!--Adding jQuery and scripting-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../main.js"></script>
+    <script src="products.js"></script>
     
 </head>
 
 <body>
-    <script src="products.js"></script>
-
     <!-- NAVBAR -->
     <div class="nav">
         <div class="navSection">
@@ -35,9 +38,8 @@
             <a class="navLabel underline" href="../cart/cart.html">CART</a>
         </div>
     </div>
-
-    <div class="body"> <!-- ACTUAL PAGE CONTENT -->
-        <div class="container">
+       
+    <div class="container">
             <div class="image">
                 <div class="slider">
                     <img id = "image-1" src = "bag.png" alt="bag">
@@ -49,7 +51,6 @@
                     <span class="dot" onclick="changeSlide(1)"></span>
                     <span class="dot" onclick="changeSlide(2)"></span>
                 </div>
-
             </div>
     
             <div class="text">
@@ -58,10 +59,12 @@
             <div class="description">
                 Attach this compact gym bag to the top of your backpack to carry your workout essentials on-the-go. Durable and versatile, it keeps your gear secure and accessible.
             </div> <br/><br/>
-            <button class="addtocart">ADD TO CART</button>
+            <input id="quantityTop"  class="quantity" type="number" min="1" max="9">
+            <button class="addtocartTop">ADD TO CART</button>
             </div>
-        </div>
-        <div class="container">
+    </div>
+
+    <div class="container">
             <div class="image">
                 <div class="slider">
                     <img id = "image-1" src = "bag.png" alt="bag">
@@ -73,41 +76,29 @@
                     <span class="dot" onclick="changeSlide(1)"></span>
                     <span class="dot" onclick="changeSlide(2)"></span>
                 </div>
-
             </div>
     
             <div class="text">
-                <h3>THE BOTTOM BAG</h3>
-                <span class="price">$49.99</span> <br/><br/>
+                <h3>BUCKLE ATTACHMENT</h3>
+                <span class="price">$29.99</span> <br/><br/>
                 <div class="description">
-                    Attach this lightweight gym bag to the bottom of your backpack to easily carry your bulky gym equipment. Sturdy and spacious, it's a convenient way to stay fit and healthy while traveling.
+                    Attach this lightweight gym bag to the bottom of your backpack with a sturdy buckle attachment. Sturdy and spacious, it's a convenient way to stay fit and healthy while traveling.
                 </div><br/><br/>
-                <button class="addtocart">ADD TO CART</button>
+                
+                <input id="quantityBottom" class="quantity" type="number" min="1" max="9">
+                <button class="addtocartBottom">ADD TO CART</button>
             </div>
-        </div>
-        <div class="spacing">
+    </div>
 
-        </div>
-
-        <!-- <div class="container">
-            <div class="image">
-                <img src="bag.png" alt="bag">
-            </div>
-            <div class="text">
-            <h2>THE TOP BAG</h2>
-            $49.99 ea <br/>
-            <div class="description">Attach this compact gym bag to the top of your backpack to carry your workout essentials on-the-go. Durable and versatile, it keeps your gear secure and accessible.</div>
-            </div>
-        </div> -->
-
-        <!-- FOOTER SECTION -->
-        <div class="footer">
+     <!-- FOOTER SECTION -->
+     <div class="footer">
+        <div class="footerContent">
             <div class="footertext">
                 <a href="">stratagym@usc.edu</a> <br/>
                 <a href="https://instagram.com/_stratagym">Instagram</a> <br />
                 <a href="../teamAbout/about.html">Design Team</a>
             </div>
-            <div class="footerRight">
+            <div>
                 <div class="email">
                     <h3>GET THAT <span class="orange">BAG</span>.</h3><br/>
                 </div>
@@ -118,9 +109,10 @@
                     </form>
                 </div>
             </div>
-        </div> <!--End Footer-->
-    </div>
+        </div>
+    </div> <!--End Footer-->
 
+</div>
 </body>
 
 </html>
