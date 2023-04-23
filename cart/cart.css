@@ -73,24 +73,63 @@ flex-direction: row;
 #signUp{
     text-decoration: underline;
 }
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartProduct{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cartInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .cartImage{
     width: 100px;
     height: 100px;
 }
+
 .cartImage img{
     width: 100%;
 }
+
 .cartInfo{
     color: rgb(79, 79, 79);
 }
+
+.edit {
+    text-decoration: underline;
+}
+
+.editProduct {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(237, 234, 226) ;
+}
+
+
 /* .itemName{
     font-weight: 600;
 } */
+
 #summary{
     color: var(--orange);
     font-size: 20px;
     font-weight: 800;
 }
+
 input[type=button]{
     background-color: var(--orange);
     color: white;
@@ -98,12 +137,26 @@ input[type=button]{
     border: 0px;
     padding: 5px;
 }
+
 #promoCode{
     border-radius: 8px;
+    padding: 10px;
     border: 0px;
+    color: black;
     background-color: white;
-    height: 25px;
-    width: 200px;
-    margin-left: 5px;
-    margin-right: 5px;
+    
+    width: 40%;
+}
+
+#promoCode:focus{
+    outline:none;
+}
+
+.promoCodeAd{
+    background-color: rgb(237, 234, 226);
+    border-radius: 20px;
+    width: 80%;
+    padding: 10px;
+
+    margin-bottom: 20px;
 }

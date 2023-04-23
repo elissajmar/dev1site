@@ -2,10 +2,3 @@
 
 // For example, we can define the header navigation here and 
 // just reference this file in every other html file.
-
-$(document).ready(function(){ 
-
-
-    
-
-})
