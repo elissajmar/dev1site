@@ -59,7 +59,49 @@ body{
         height: 175px;
 }
 
+#big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #151515;
+}
+
+#animationIntro{
+   font-weight: 700;
+   font-size: 80px;
+   transform: translateX(-80px);
+}
+#animationIntro p{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+} 
+#animationIntro p .animationIntro{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+#animationIntro p .animationIntro .letter{
+    transform-origin: center center 25px;
+}
+#animationIntro p .animationIntro .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+#animationIntro p .animationIntro .letter.in{
+    transition: 0.38s ease;
+}
+#animationIntro p .animationIntro .letter.behind{
+    transform: rotateX(-90deg);
+}
+.animationIntro {
+    color: var(--orange);
     
+
+}
+
 @media screen and (max-width: 760px){
 
     #bigpicture {
