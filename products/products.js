@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
 
     /* CART FUNCTIONALITY */
-    localStorage.clear()
+    //localStorage.clear()
 
     /* DEFINING PRODUCTS */
     let topBag = { //defines the template for a product with name, price, and quantity

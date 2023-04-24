@@ -50,6 +50,7 @@ $(document).ready(function(){
             code +=         "<div class='productPrice'> $" + productPrice + "</div>"
             code +=         "<div class='productQuantity'> Quantity: " + productQuantity + "</div>" 
             code +=         "<button class='edit'> Edit </button>"
+            code +=         "<div class='editProduct'> <input id='newquantity' type='number' min='1' max='10'> <div class='save'> Save </div> </div>"
             code +=     "</div>"
             code+="</div>"
 
@@ -68,29 +69,26 @@ $(document).ready(function(){
 
     $(".edit").click(function() {
         id = $(this).parent().parent().attr("id")
-        console.log(id)
+        //console.log(id) //testing
 
-        code = "<div class='editProduct'> <input id='newquantity' type='number' min='1' max='2'> <div class='save'>Save</div> </div>"
-        
-        $(this).parent().append(code)
+        $(this).siblings(".editProduct").css("display", "flex") //show edit box
         $(this).css("display", "none") //hides edit prompt
         
     }) 
 
-    // CURRENTLY NOT WORKING
     $(".save").click(function() { 
-        console.log("clicked")
-        newQuantity = $(this).siblings("input").val()
-        cart[id].quantity = newQuantity;
+        newQuantity = $(this).siblings("input").val() //gets the new quantity from the value of the input
+        cart[id].quantity = newQuantity; //sets new quantity for product
 
-        setCart(cart)
-        reload()
+        setCart(cart) //stores in local storate
+        location.reload() //reload page to reprint updated cart
     })
+
 
     $("#applyPromo").click(function() {
         applyPromo(cart)
 
-        $("#promoSummary").append("BAG20")
+        $("#promoSummary").append("BAG20") //add promo code to cart summary
     })
 
     function applyPromo(cart){
@@ -101,6 +99,15 @@ $(document).ready(function(){
 
         printCart(cart, totalPrice)
     }
+
+
+    // PAY WITH VENMO
+    $(".link").click(function(){
+        window.open(
+            "https://venmo.com", 
+            '_blank' //new tab
+        );
+    })
 
 
 })

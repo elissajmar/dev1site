@@ -17,6 +17,10 @@
     color: var(--grey);
 }
 
+.white {
+    color: white;
+}
+
 
 /* FONT & SIZES */
 /* Predefined universal font style*/

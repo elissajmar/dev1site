@@ -1,8 +1,5 @@
 body {
     background-color: var(--grey);
-
-    display: flex;
-    flex-direction: column;
 }
 
 .screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
@@ -15,6 +12,9 @@ body {
     padding-bottom: 80px;
     padding-left: 120px;
     padding-right: 120px;
+}
+
+#nanogallery2 {
 }
 
 /* Hero section */
