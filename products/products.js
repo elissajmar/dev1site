@@ -36,17 +36,26 @@ $(document).ready(function(){
         quantity = $("#quantityTop").val()
         if (quantity != ""){ //make sure input isn't blank
             addToCart(topBag, quantity)
+            $(this).siblings(".addedAlert").css("display", "block")
+
+            $(".cartSidebar").css("display", "flex")
+            printCart(cart)
             console.log(cart) //to check
         }
         else {
             alert("Please enter a valid quantity!")
         }
+
     })
 
     $(".addtocartBottom").click(function(){
         quantity = $("#quantityBottom").val()
         if (quantity != ""){ //make sure input isn't blank
             addToCart(bottomBag, quantity)
+            $(this).siblings(".addedAlert").css("display", "block")
+
+            $(".cartSidebar").css("display", "flex")
+            printCart(cart)
             console.log(cart) //to check
         }
 
@@ -109,6 +118,32 @@ $(document).ready(function(){
         setCart(cart)
     }
 
+    function printCart(cart) { 
+        $(".cartSidebar").html("<h3>CART</h3>")
+
+        if (cart.length == 0){
+            $(".cartSidebar").append("Looks like your cart is empty!")
+        }
+
+        for (i=0; i<cart.length; i++){
+            productQuantity = cart[i].quantity
+            productName = cart[i].name
+            productPrice = cart[i].price
+
+            code = "<div class='cartProduct' id='" + cart[i].id + "'>" 
+            code +=     "<div class='cartInfo'>"
+            code +=         "<div class='productName'><strong>" + productName + "</strong></div>"
+            code +=         "<div class='productPrice'> $" + productPrice + "</div>"
+            code +=         "<div class='productQuantity'> Quantity: " + productQuantity + "</div>" 
+            code +=     "</div>"
+            code+="</div>"
+
+            $(".cartSidebar").append(code)
+        }
+
+        $(".cartSidebar").append("<div class='button white'><a href='../cart/cart.html'>CHECKOUT<a></div>")
+        
+    }
     
 
 })
