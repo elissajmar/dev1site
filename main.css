@@ -76,6 +76,25 @@ body {
     font-family: Neue Haas Grotesk;
 }
 
+
+#preloader {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader video {
+    width: 200px;
+}
+
+
 /* BUTTONS */
 .button {
     width: fit-content;
@@ -108,7 +127,7 @@ body {
 
     justify-content: space-between;
     align-items: center;
-    z-index: 100; /* keeps nav bar on top always */
+    z-index: 3; /* keeps nav bar on top always */
 
     width: 80%;
     position: fixed;
