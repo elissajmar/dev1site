@@ -1,4 +1,13 @@
 body {
+
+}
+
+p {
+    color: red;
+}
+
+
+/* body {
     background-color: white;
     transition: all 0.3s ease-in-out;
 }
@@ -53,4 +62,4 @@ p.dark{
 .toggle.active::before{
     background-color: #18191a;
     left: calc(100% - 1465px);
-}
+} */

@@ -5,13 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Toggle Mode</title>
 
-        <link rel="stylesheet" href="togglebutton.css" />
+        <link id="mode" rel="stylesheet" href="lightmode.css" />
     </head>
     <body>
-        <div class="toggle"> </div>
+
+        <div class="toggle"> <p>Toggle</p> </div>
+
+        <p> hello this is some text </p>
         
         <script>
-            const body = document.querySelector("body"),
+            
+            //localStorage.clear() //clear to test
+            toggle = document.querySelector(".toggle");
+            //localStorage.setItem("mode", "light"); //sets local storage mode to light by default
+        
+            toggle.addEventListener("click", ()=> {
+                let getMode = localStorage.getItem("mode");
+
+                if (!getMode) {
+                    localStorage.setItem("mode", "dark");
+                    document.getElementById("mode").setAttribute("href", "darkmode.css");  //change to dark mode
+                }
+                
+                if(getMode && getMode == "dark") { //if dark mode is selected 
+                    document.getElementById("mode").setAttribute("href", "lightmode.css");  //change to light mode
+                    localStorage.setItem("mode", "light") //set mode to light in localStorage
+                }
+
+                else if (getMode && getMode == "light"){ //if light mode is selected 
+                    document.getElementById("mode").setAttribute("href", "darkmode.css");  //change to dark mode
+                    localStorage.setItem("mode", "dark") //set mode to dark in localStorage
+                }
+            });
+            
+            /* const body = document.querySelector("body"),
             toggle = document.querySelector(".toggle");
 
             let getMode = localStorage.getItem("mode");
@@ -30,7 +57,7 @@
                 localStorage.setItem("mode", "dark")
             });
 
-            toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+            toggle.addEventListener("click", () => toggle.classList.toggle("active")); */
 
         </script>
     </body>
