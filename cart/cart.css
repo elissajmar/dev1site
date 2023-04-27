@@ -19,8 +19,9 @@ a:link{
     /* margin-right: 20%; */
     justify-content: space-evenly;
     /* background-color: black;  */
-    width: 70vw;
+    width: 80vw;
 }
+
 .leftCart{
     flex-grow: 2;
     display: flex;
@@ -28,15 +29,20 @@ a:link{
     flex-wrap: wrap;
     margin-right: 5px;
 }
+
 .summary{
     flex-grow: 3;
     padding: 20px;
     /*background-color: #D9D9D9;   Hi victoria, maybe we could get rid of the grey 
                                     background here? it kind of clashes with the 
                                     background color -Elissa */
-    margin-left: 5px;
+
     max-height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
+
 #top{
     flex-shrink: 1;
     margin-bottom: 20px;
@@ -44,6 +50,7 @@ a:link{
     padding-right: 20px;
     /*background-color: #D9D9D9;*/
 }
+
 #bottom{
     flex-grow: 4;
     display: flex;
@@ -103,6 +110,7 @@ flex-direction: row;
 
 .cartInfo{
     color: rgb(79, 79, 79);
+    width: 70%;
 }
 
 .edit {
@@ -110,7 +118,7 @@ flex-direction: row;
 }
 
 .editProduct {
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 10px;
     margin-top: 10px;
@@ -126,7 +134,7 @@ flex-direction: row;
 
 #summary{
     color: var(--orange);
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 800;
 }
 
@@ -135,12 +143,13 @@ input[type=button]{
     color: white;
     border-radius: 10px;
     border: 0px;
-    padding: 5px;
+    padding: 13px;
 }
 
 #promoCode{
     border-radius: 8px;
-    padding: 10px;
+    
+    height: 40px;
     border: 0px;
     color: black;
     background-color: white;
@@ -159,4 +168,13 @@ input[type=button]{
     padding: 10px;
 
     margin-bottom: 20px;
+}
+
+
+/* MOBILE RESIZING */
+@media screen and (max-width: 760px){
+    .cartFlex {
+        flex-direction: column;
+        gap: 40px;
+      }
 }

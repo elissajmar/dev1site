@@ -38,56 +38,70 @@
             <a class="navLabel underline" href="../cart/cart.html">CART</a>
         </div>
     </div>
-       
-    <div class="container">
-            <div class="image">
-                <div class="slider">
-                    <img id = "image-1" src = "bag.png" alt="bag">
-                    <img id = "image-2" src = "bag.png" alt="bag">
-                    <img id = "image-3" src = "bag.png" alt="bag">
+    
+    <div class="body">
+        <div class="productsList">
+            <div class="container">
+                <div class="image">
+                    <div class="slider">
+                        <img id = "image-1" src = "bag.png" alt="bag">
+                        <img id = "image-2" src = "bag.png" alt="bag">
+                        <img id = "image-3" src = "bag.png" alt="bag">
+                    </div>
+                    <div class="navigation-button">
+                        <span class="dot active" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                    </div>
                 </div>
-                <div class="navigation-button">
-                    <span class="dot active" onclick="changeSlide(0)"></span>
-                    <span class="dot" onclick="changeSlide(1)"></span>
-                    <span class="dot" onclick="changeSlide(2)"></span>
+        
+                <div class="text">
+                    <h3>THE TOP BAG</h3>
+                    <span class="price">$49.99</span> <br/><br/>
+                    <div class="description">
+                        Attach this compact gym bag to the top of your backpack to carry your workout essentials on-the-go. Durable and versatile, it keeps your gear secure and accessible.
+                    </div> 
+                    
+                    <br/><br/>
+                    <input id="quantityTop"  class="quantity" type="number" min="1" max="9">
+                    <button class="addtocartTop">ADD TO CART</button>
+                    <div class="addedAlert orange"> Added! </div>
                 </div>
             </div>
     
-            <div class="text">
-                <h3>THE TOP BAG</h3>
-                <span class="price">$49.99</span> <br/><br/>
-                <div class="description">
-                    Attach this compact gym bag to the top of your backpack to carry your workout essentials on-the-go. Durable and versatile, it keeps your gear secure and accessible.
-                </div> <br/><br/>
-                <input id="quantityTop"  class="quantity" type="number" min="1" max="9">
-                <button class="addtocartTop">ADD TO CART</button>
-            </div>
-    </div>
-
-    <div class="container">
-            <div class="image">
-                <div class="slider">
-                    <img id = "image-1" src = "bag.png" alt="bag">
-                    <img id = "image-2" src = "bag.png" alt="bag">
-                    <img id = "image-3" src = "bag.png" alt="bag">
+            <div class="container">
+                <div class="image">
+                    <div class="slider">
+                        <img id = "image-1" src = "bag.png" alt="bag">
+                        <img id = "image-2" src = "bag.png" alt="bag">
+                        <img id = "image-3" src = "bag.png" alt="bag">
+                    </div>
+                    <div class="navigation-button">
+                        <span class="dot active" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                    </div>
                 </div>
-                <div class="navigation-button">
-                    <span class="dot active" onclick="changeSlide(0)"></span>
-                    <span class="dot" onclick="changeSlide(1)"></span>
-                    <span class="dot" onclick="changeSlide(2)"></span>
+        
+                <div class="text">
+                    <h3>BUCKLE ATTACHMENT</h3>
+                    <span class="price">$29.99</span> <br/><br/>
+                    <div class="description">
+                        Attach this lightweight gym bag to the bottom of your backpack with a sturdy buckle attachment. Sturdy and spacious, it's a convenient way to stay fit and healthy while traveling.
+                    </div>
+                    
+                    <br/><br/>
+                    
+                    <input id="quantityBottom" class="quantity" type="number" min="1" max="9">
+                    <button class="addtocartBottom">ADD TO CART</button>
+                    <div class="addedAlert orange"> Added! </div>
                 </div>
             </div>
+        </div>
     
-            <div class="text">
-                <h3>BUCKLE ATTACHMENT</h3>
-                <span class="price">$29.99</span> <br/><br/>
-                <div class="description">
-                    Attach this lightweight gym bag to the bottom of your backpack with a sturdy buckle attachment. Sturdy and spacious, it's a convenient way to stay fit and healthy while traveling.
-                </div><br/><br/>
-                
-                <input id="quantityBottom" class="quantity" type="number" min="1" max="9">
-                <button class="addtocartBottom">ADD TO CART</button>
-            </div>
+        <div class="cartSidebar">
+            <!--Populated with JS-->
+        </div>
     </div>
 
      <!-- FOOTER SECTION -->

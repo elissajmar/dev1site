@@ -1,0 +1,27 @@
+body {
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    width: 80%;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#nanogallery2{
+    width: 100%;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+video {
+    width: 300px;
+    border-radius: 20px;
+}

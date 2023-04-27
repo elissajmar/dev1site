@@ -17,6 +17,10 @@
     color: var(--grey);
 }
 
+.white {
+    color: white;
+}
+
 
 /* FONT & SIZES */
 /* Predefined universal font style*/
@@ -72,14 +76,33 @@ body {
     font-family: Neue Haas Grotesk;
 }
 
+
+#preloader {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader video {
+    width: 200px;
+}
+
+
 /* BUTTONS */
 .button {
     width: fit-content;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
     background-color: var(--orange);
 }
 
@@ -88,7 +111,11 @@ body {
     text-decoration: none;
     color: white;
     line-height: 0;
-    font-weight: bold;
+    font-weight: normal;
+}
+
+.button a:hover {
+    color: black;
 }
 
 
@@ -100,7 +127,7 @@ body {
 
     justify-content: space-between;
     align-items: center;
-    z-index: 100; /* keeps nav bar on top always */
+    z-index: 3; /* keeps nav bar on top always */
 
     width: 80%;
     position: fixed;

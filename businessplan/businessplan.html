@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--STYLESHEETS-->
+        <link rel="stylesheet" href="../main.css"> <!--References the css file for this page specifically -->
+        <link rel="stylesheet" href="businessplan.css"> <!--References the css file for this page specifically -->
+
+        <!--Adding jQuery and scripting-->
+        <script src="http://code.jquery.com/jquery.js"></script> 
+        <script src="../main.js"></script>
+
+        <!-- nanogallery2 -->
+        <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+        <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div class="nav">
+            <div class="navSection">
+                <p class="logo orange">STRATAGYM</p>
+            </div>
+
+            <div class="navSection">
+                <a class="navLabel underline" href="../home/home.html">HOME</a>
+            
+                <a class="navLabel underline" href="../products/products.html">PRODUCTS</a>
+
+                <a class="navLabel underline" href="../about/about.html">ABOUT</a>
+
+                <a class="navLabel underline" href="../contact/contact.html">CONTACT</a>
+
+            </div>
+
+            <div class="navSection">
+                <a class="navLabel underline" href="../cart/cart.html">CART</a>
+            </div>
+        </div>
+    
+        <div class="body">
+            <h3>Our Business Plan</h3>
+            <!-- NEW PHOTO GALLERY -->
+            <div id="nanogallery2">gallery_made_with_nanogallery2</div>    
+            
+            <div>
+                Busy college students often face the problem of having too much to carry. With multiple bags in tow, it's inconvenient and uncomfortable to go about daily life. Many gym bags today are not designed with convenience in mind. But Stratagym is different.
+            </div> 
+
+            <div class="heading">
+                Our company mission is to empower individuals who lead an active and busy lifestyle by providing an affordable and convenient solution for carrying gym and other essentials, all while transitioning from the class to the gym.
+            </div>
+
+            <video controls >
+                <source src="assets/demo.mov" type="video/mov">
+                Video is not supported.
+            </video>
+    
+            <div class="heading">
+                Products and Services
+            </div>   
+
+            <div>
+                Bag attachments for gym clothes, shoes, and equipment.
+            </div>
+
+            <div class="heading">
+                Marketplace
+            </div> 
+            
+            <div>
+                A dive into our competitors and target market.
+            </div>
+
+            <div>
+                <div class="heading">Competitors</div>
+                <strong> Holdable gym bags:</strong>
+                    Gym duffel <br />
+                <strong> Attachable gym bags:</strong>
+                    Vamose <br />
+                    <strong> Gym/work bags: </strong><br />
+                    Aer Fit Pack <br />
+                    Aer Duffel Pack <br />
+                    Z Packs Add-Ons  <br />
+            </div>
+
+            <div>
+                <div class="heading">
+                    Target Market
+                </div>
+                Generally, our target market is students who frequent the gym. <br />
+                <strong>Market Niche </strong><br /> 
+                Students who frequent the gym during the day but do not have time to run back to their dorms/apartments to put their gym bag away between classes.
+            </div>
+            
+        </div>
+
+        <script>
+            jQuery(document).ready(function () {
+
+                jQuery("#nanogallery2").nanogallery2({
+
+                    // CONTENT SOURCE
+                    // The optional add-on nanoPhotosProvider is used for this example - this is not mandatory and can easily be replaced by a list of medias
+                    
+                    // ### gallery content ### 
+                    items: [
+                        { src: 'assets/feed1 Medium.jpeg', srct: 'assets/feed1 Medium.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed2.jpeg', srct: 'assets/feed2.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed3.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed4.jpg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed5.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed6.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed7.jpeg', title: 'STRATAGYM' },
+                        { src: 'assets/feed3.jpeg', srct: 'assets/feed8.jpeg', title: 'STRATAGYM' },
+                    ],
+                    
+                    galleryDisplayTransitionDuration: 1500,
+                
+                    // GALLERY AND THUMBNAIL LAYOUT
+                    galleryMosaic : [                       // default layout
+                    { "w": 16, "h": 18, "c": 1,  "r": 1  },
+                    { "w": 8,  "h": 9,  "c": 21, "r": 5  },
+                    { "w": 4,  "h": 6,  "c": 28, "r": 2  },
+                    { "w": 4,  "h": 6,  "c": 19, "r": 11 },
+                    { "w": 6,  "h": 8,  "c": 27, "r": 10 }
+                    ],
+
+                    galleryMosaicXS : [                     // layout for XS width
+                    { "w": 6, "h": 9, "c": 1,  "r": 1  },
+                    { "w": 4,  "h": 4,  "c": 9, "r": 3  },
+                    { "w": 2,  "h": 3,  "c": 12, "r": 1  },
+                    { "w": 2,  "h": 3,  "c": 8, "r": 5 },
+                    { "w": 3,  "h": 4,  "c": 12, "r": 6 }
+                    ],
+
+                    galleryMosaicSM : [                     // layout for SM width
+                    { "w": 6, "h": 9, "c": 1,  "r": 1  },
+                    { "w": 4,  "h": 4,  "c": 9, "r": 3  },
+                    { "w": 2,  "h": 3,  "c": 12, "r": 1  },
+                    { "w": 2,  "h": 3,  "c": 8, "r": 5 },
+                    { "w": 3,  "h": 4,  "c": 12, "r": 6 }
+                    ],
+
+                    galleryMaxRows: 1,
+                    galleryDisplayMode: 'rows',
+                    gallerySorting: 'random',
+                    thumbnailDisplayOrder: 'random',
+
+                    thumbnailAlignment: 'scaled',
+                    thumbnailHeight: 100, thumbnailWidth: 100,
+                    thumbnailGutterWidth: 0, thumbnailGutterHeight: 0,
+                    thumbnailBorderHorizontal: 0, thumbnailBorderVertical: 0,
+
+                    thumbnailToolbarImage : null,
+                    thumbnailToolbarAlbum: null,
+
+                    thumbnailLabel: { display: false },
+                    
+                    // DISPLAY ANIMATION
+                    galleryDisplayTransition: 'rotateX',        // gallery display animation
+                    galleryDisplayTransitionDuration: 1500,
+                    thumbnailDisplayTransition: 'scaleUp',     // thumbnail display animation
+                    thumbnailDisplayTransitionDuration: 600,
+                    thumbnailDisplayInterval: 30,
+
+
+                    // HOVER ANIMATION
+                    thumbnailBuildInit2: '.nGY2GThumbnailAlbumTitle_border-left_5px solid #23CB99|.nGY2GThumbnailAlbumTitle_margin_20px|\
+                        title_backgroundColor_rgba(200,200,200,0.8)|title_color_#000',
+                    thumbnailHoverEffect2: 'image_scale_1.00_1.15_500_bounce|image_rotateZ_0deg_05deg',
+                    touchAnimation: true,
+                    touchAutoOpenDelay: 500,
+
+                    // LIGHTBOX
+                    viewerToolbar:    {   // bottom toolbar
+                    display: true,
+                    standard:  'label',
+                    minimized: 'label' },
+                    viewerTools:    {
+                    topLeft:   '',
+                    topRight:  'rotateLeft, rotateRight, fullscreenButton, closeButton'
+                    },
+                
+                    // DEEP LINKING
+                    locationHash: false
+                });
+
+            });
+        </script>
+
+        
+
+
+        <!-- FOOTER SECTION -->
+        <div class="footer">
+            <div class="footerContent">
+                <div class="footertext">
+                    <a href="">stratagym@usc.edu</a> <br/>
+                    <a href="https://instagram.com/_stratagym">Instagram</a> <br />
+                    <a href="../businessplan/businessplan.html">Business Strategy</a> <br />
+                    <a href="../teamAbout/about.html">Design Team</a>
+                </div>
+                <div>
+                    <div class="email">
+                        <h3>GET THAT <span class="orange">BAG</span>.</h3><br/>
+                    </div>
+                    <div>
+                        <form>
+                            <input type="text" name="name" placeholder="full name" required/>
+                            <input type="text" name="email" id="email" placeholder="you@email" required/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> <!--End Footer-->
+
+    </body>
+</html>
