@@ -67,7 +67,7 @@ h1 {
 }
 
 /* Features section */
-.features {
+/* .features {
     background-color: var(--orange);
 
     color:white;
@@ -87,7 +87,80 @@ h1 {
 
 .featureImg {
     width: 200px;
+    height: 100%;
+} */
+
+/* diagram */
+.topspace{
+    padding-bottom: 8vw;
+    background-color: var(--orange);
 }
+.diagram{
+    position: relative;
+    margin: auto;
+    background-image: url("assets/bag.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60vw;
+    height: 54vw;
+}
+
+.topImages{
+    position: relative;
+    margin: auto;
+}
+
+.highlight{
+    position:absolute;
+}
+.highlight:hover{
+    -webkit-filter: 
+    drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px 2px 0 white)
+    drop-shadow(2px -2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+
+    filter: 
+        drop-shadow(2px 2px 0 white)
+        drop-shadow(-2px 2px 0 white)
+        drop-shadow(2px -2px 0 white)
+        drop-shadow(-2px -2px 0 white);
+}
+
+#leftBuck{
+    width: 13.75vw;
+    top: 6.25vw;
+    left: 14.25vw;
+}
+#rightBuck{
+    width: 15.5vw;
+    top: 7.75vw;
+    left: 34vw;
+}
+#zipper{
+    width: 60vw;
+    top: 26vw;
+    right: 0vw;
+}
+#text{
+    font-size: 7vw;
+    margin: auto;
+    padding-bottom: 15vw;
+    font-family: Compacta;
+    text-align: center;
+}
+
+.fullDiagram{
+    margin: auto;
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--grey);
+    width: 100vw;
+}
+
+
+
 
 /*Socials section*/
 .social{
@@ -106,6 +179,7 @@ h1 {
 .feed img{
     width: 23%;
 }
+
 
 
 /* TABLET/MOBILE RESIZING */
