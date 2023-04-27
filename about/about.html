@@ -7,12 +7,13 @@
         
         <!--STYLESHEETS-->
         <link rel="stylesheet" href="../main.css"> <!--References the css file defining main styles -->
-        <link rel="stylesheet" href="about.css"> <!--References the css file for this page specifically -->
+        <link rel="stylesheet" href="about.css"> <!-- References the css file for this page specifically -->
 
         <!--Adding jQuery and scripting-->
-        <script src="http://code.jquery.com/jquery.js"></script> 
-        <script src="../main.js"></script>
-        <script src="about.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+        <script type="text/javascript" src="../main.js"></script>
+        
     </head>
     
     <body>
@@ -73,7 +74,25 @@
             </p>
         </div>
         <!-- first animation introducing the team culture -->
-        <div id="big">
+        <script type="text/javascript" src="../about/about.js"></script>
+        <div id="chatBox">
+            <h2 id="chatBot"style="text-align: center; color: var(--orange);">Chat Bot</h2>
+                <div id="chatBoxFlex">
+                    <h5 class="right one">Me:</h5>
+                    <p class="right rl one">Hold on, I still don't know what Stratagym is</p>
+                    <br><br><br>
+                    <h5 class="left two">Stratagym:</h5>
+                    <p class="left rl two">Well you are in the right place</p>
+                    <br><br><br>
+                    <h5 class="right three">Me:</h5>
+                    <p class="right rl three">Great</p>
+                    <br><br><br>
+                    <h5 class="left four">Me:</h5>
+                    <p class="left rl four"> Let's get started!</p>
+                </div>
+            </div>
+            <div id="big">
+            
             <div id="animationIntro">
                 <p style="color: var(--grey);"> We are</p>
                     <p>
@@ -85,51 +104,7 @@
                     </p>
             </div>
         </div>
-        <script>
-//             "use strict";
-//             let words = document.querySelectorAll(".animationIntro");
-// words.forEach((word) => {
-//   let letters = word.textContent.split("");
-//   word.textContent = "";
-//   letters.forEach((letter) => {
-//     let span = document.createElement("span");
-//     span.textContent = letter;
-//     span.className = "letter";
-//     word.append(span);
-//   });
-// });
-
-// let currentWordIndex = 0;
-// let maxWordIndex = words.length - 1;
-// words[currentWordIndex].style.opacity = "1";
-
-// let rotateText = () => {
-//   let currentWord = words[currentWordIndex];
-//   let nextWord =
-//     currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
-//   // rotate out letters of current word
-//   Array.from(currentWord.children).forEach((letter, i) => {
-//     setTimeout(() => {
-//       letter.className = "letter out";
-//     }, i * 80);
-//   });
-//   // reveal and rotate in letters of next word
-//   nextWord.style.opacity = "1";
-//   Array.from(nextWord.children).forEach((letter, i) => {
-//     letter.className = "letter behind";
-//     setTimeout(() => {
-//       letter.className = "letter in";
-//     }, 340 + i * 80);
-//   });
-//   currentWordIndex =
-//     currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
-//  };
-
-// rotateText();
-// setInterval(rotateText, 3000);
-
-// console.log();
-        </script>
+        
 
         <!-- Meet the team -->
         <div id="theteambox">

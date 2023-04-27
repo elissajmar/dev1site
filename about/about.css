@@ -1,7 +1,9 @@
 body{
     background-color: #DEDAD6;
 }
-
+h5{
+    margin-bottom: 0px;
+}
 #outercontainer{
     width: 100%;
 }
@@ -60,6 +62,7 @@ body{
 }
 
 #big{
+    clear: both;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +73,7 @@ body{
 #animationIntro{
    font-weight: 700;
    font-size: 80px;
-   transform: translateX(-80px);
+   transform: translateX(-150px);
 }
 #animationIntro p{
     display: inline-flex;
@@ -98,10 +101,49 @@ body{
 }
 .animationIntro {
     color: var(--orange);
-    
+}
+#chatBox{
+    color: black;
+    font-size: larger;
+    background-color: #151515;
+    height: 90vh;
+    padding-top: 100px;
+}
+#chatBoxFlex{
+    /* display: flex; */
+    flex-direction: column-reverse;
+    flex-direction: column;
+    width: 700px;
+    box-shadow: 10px 10px var(--orange);
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    height: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: blue;
+    display: none;
+}
+.rl{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    display: none;
+    clear: both;
+    margin-top: 8px;
+}
+.right{
+    text-align: right;
+    float: right;
+    display: none;
 
 }
-
+.left{
+    text-align: left;
+    float: left;
+    display: none;
+}
 @media screen and (max-width: 760px){
 
     #bigpicture {
