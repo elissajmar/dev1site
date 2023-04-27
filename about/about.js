@@ -38,6 +38,8 @@
       currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
 
    };
+   rotateText();
+   setInterval(rotateText, 2000);
 
 //pulse animation
   $("#chatBot").delay(100)
@@ -62,7 +64,7 @@
         
     };
 // runs the chatBot function when mouse over the chatbot title
-   $("#chatBot").click(function(){
+   $("#chatBot").mouseover(function(){
     chatBot();
    })
   //  $("#chatBot").mouseout(function(){
