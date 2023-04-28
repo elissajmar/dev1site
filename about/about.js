@@ -38,16 +38,17 @@
       currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
 
    };
-   rotateText();
-   setInterval(rotateText, 2000);
+    rotateText();
+    setInterval(rotateText, 2000);
 
 //pulse animation
+function pulse(){
   $("#chatBot").delay(100)
     .animate({"font-size": "4.8em"})
     .animate({"font-size": "5em"})
-    .animate({"font-size": "4.8em"})
-    .animate({"font-size": "5em"});
-
+    // .animate({"font-size": "4.8em"})
+    // .animate({"font-size": "5em"});
+  }
 //function that does the chat interface
      function chatBot() 
     {
@@ -61,13 +62,32 @@
        $("#chatBoxFlex").delay(1800).animate({"height": "240px"}, 100);
        $(".four").delay(6000).fadeIn();
         $("#chatBoxFlex").delay(1800).animate({"height": "300px"}, 100);
+    
         
     };
 // runs the chatBot function when mouse over the chatbot title
-   $("#chatBot").mouseover(function(){
+  //  $("#chatBot").click(function(){
     chatBot();
-   })
-  //  $("#chatBot").mouseout(function(){
-  //   chatBot().stop();
   //  })
+ 
+  //  timline animation
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+        pulse();
+      }
+      else{
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden, .hidden2");
+  hiddenElements.forEach((el) => observer.observe(el));
+
+
+
 });
