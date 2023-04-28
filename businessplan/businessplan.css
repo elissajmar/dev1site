@@ -2,6 +2,7 @@ body {
     background-color: var(--grey);
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
 }
 
 .body {
@@ -10,6 +11,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+a {
+    color: var(--orange)
+}
+
+.section {
+    border-radius: 60px;
+    border: 1px solid grey;
+    padding: 40px;
 }
 
 #nanogallery2{
@@ -21,7 +32,20 @@ body {
     font-weight: bold;
 }
 
+.heading:hover {
+    color: var(--orange);
+}
+
 video {
     width: 300px;
     border-radius: 20px;
+}
+
+.ask {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.ask:hover {
+    color: var(--orange);
 }
