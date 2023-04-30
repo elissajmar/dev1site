@@ -140,6 +140,10 @@ body {
     gap: 20px;
 }
 
+.navSection a{
+    text-decoration: none;
+}
+
 .logo{
     font-family: Compacta;
 }
