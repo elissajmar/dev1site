@@ -13,9 +13,11 @@
     <!-- nanogallery2 -->
     <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet"
         type="text/css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+    
+    <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
 
 
 </head>
@@ -164,7 +166,7 @@
                 that we can make Stratagym a success in the multi-function carrying apparatus (bags) gym bag market.
             </div>
         </div>
-        <div id="chartDiv" style="max-width: 740px;height: 400px;margin: 0px auto">
+        <div id="chartDiv" style="max-width: 1000px; height: 500px; margin: 0px auto">
         </div>
         <script>
 
@@ -174,7 +176,7 @@
 
             // Load CSV data and convert to JSON 
             JSC.fetch(
-                'assets/stratagymfinancials.csv'
+                'assets/sheet.csv'
             )
                 .then(function (response) {
                     return response.text();
@@ -195,14 +197,14 @@
                     yAxis: { label_text: 'Amount (USD)' },
                     xAxis: {
                         formatString: 'd',
-                        label_text: 'Year',
+                        label_text: 'Month',
                         scale_minInterval: 1
                     },
                     series: getSeries(),
                     toolbar_items_label: {
                         type: 'label',
                         label_text:
-                            '<chart scale width=500 min=1940 max=2015 interval=15>',
+                            '<chart scale width=500 min=1 max=12 interval=1>',
                         boxVisible: false,
                         position: 'bottom',
                         itemsBox: {
@@ -212,9 +214,9 @@
                         items_slider: {
                             type: 'range',
                             width: 500,
-                            value: [1940, 2015],
-                            min: 1940,
-                            max: 2015,
+                            value: [1, 12],
+                            min: 1,
+                            max: 12,
                             events_change: applyZoom
                         }
                     }
