@@ -7,19 +7,20 @@
         
         <!--STYLESHEETS-->
         <link rel="stylesheet" href="../main.css"> <!--References the css file defining main styles -->
-        <link rel="stylesheet" href="about.css"> <!--References the css file for this page specifically -->
+        <link rel="stylesheet" href="about.css"> <!-- References the css file for this page specifically -->
 
         <!--Adding jQuery and scripting-->
-        <script src="http://code.jquery.com/jquery.js"></script> 
-        <script src="../main.js"></script>
-        <script src="about.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+        <script type="text/javascript" src="../main.js"></script>
+        
     </head>
     
     <body>
     <!-- NAVBAR -->
     <div class="nav">
         <div class="navSection">
-            <p class="logo orange">STRATAGYM</p>
+            <a href="../home/home.html"><p class="logo orange">STRATAGYM</p></a>
         </div>
 
         <div class="navSection">
@@ -47,10 +48,71 @@
                         --> 
                     
         <!-- Big Team Image -->
+        <!-- first animation introducing the team culture -->
+        <script defer type="text/javascript" src="../about/about.js"></script>
+        <div id="chatBox">
+            <div class="hidden2" id="chatBoxFlex">
+                <h5 class="right one">Me:</h5>
+                <p class="right rl one">Hold on, could you tell me a little more about Stratagym?</p>
+                <br><br><br>
+                <h5 class="left two">Stratagym:</h5>
+                <p class="left rl two">Well, you are in the right place!</p>
+                <br><br><br>
+                <h5 class="right three">Me:</h5>
+                <p class="right rl three">Great</p>
+                <br><br><br>
+                <h5 class="left four">Me:</h5>
+                <p class="left rl four"> Let's get started!</p>
+            </div>
+            <div id="img1">
+                <img src="assets/stratagymPhoto1.jpeg" style="width: 300px; border-radius: 20px;">
+            </div>
+            <div id="text1">
+                So, what's the story <br> behind this bag?
+            </div>
+            <div id="img2">
+                <img src="allison.jpg" style="width: 200px; border-radius: 20px;">
+            </div>
+            <div id="img3">
+                <img src="assets/frisbee.png" style="width: 200px; border-radius: 20px;">
+            </div>
+            <div id="text2">
+                This is Allison. She's a busy college student <br> who also plays <span style="color: var(--orange);">ultimate frisbee</span>, so she's <br> always moving around campus.
+            </div>
+            <div id="text3">
+                She says, "I've always felt frustrated <br> about having to carry so many <span style="color: var(--orange);">bags</span>."
+            </div>
+            <div id="text4">
+                So, she formed a team to create something <br> that would solve this issue.
+            </div>
+            <div id="text5">
+                Meet Paris and Friends co. ! The company behind your <br> favorite brand, Stratagym.
+            </div>
+            
+            
+        </div>
+
+        <div id="big">
+            <div id="animationIntro">
+                <p style="color: var(--grey);"> We are</p>
+                    <p>
+                    <span class="animationIntro">Bold</span>
+                    <span class="animationIntro">Creative</span>
+                    <span class="animationIntro">By &nbsp Athletes</span>
+                    <span class="animationIntro">For&nbspAthletes</span>
+                    <span class="animationIntro">Stratagym</span>
+                    </p>
+            </div>
+        </div>
+
+       
+        
         <div id="bigpicture">
             <h2>OUR STORY</h2>
         </div>
 
+        
+        
         <!-- Text -->
         <div id="text">
             <p>
@@ -72,64 +134,46 @@
                 Join us on our journey towards simplifying your fitness routine with our stylish and functional gym bags and backpacks.
             </p>
         </div>
-        <!-- first animation introducing the team culture -->
-        <div id="big">
-            <div id="animationIntro">
-                <p style="color: var(--grey);"> We are</p>
-                    <p>
-                    <span class="animationIntro">Bold</span>
-                    <span class="animationIntro">Creative</span>
-                    <span class="animationIntro">By &nbsp Athletes</span>
-                    <span class="animationIntro">For&nbspAthletes</span>
-                    <span class="animationIntro">Stratagym</span>
-                    </p>
-            </div>
-        </div>
-        <script>
-//             "use strict";
-//             let words = document.querySelectorAll(".animationIntro");
-// words.forEach((word) => {
-//   let letters = word.textContent.split("");
-//   word.textContent = "";
-//   letters.forEach((letter) => {
-//     let span = document.createElement("span");
-//     span.textContent = letter;
-//     span.className = "letter";
-//     word.append(span);
-//   });
-// });
 
-// let currentWordIndex = 0;
-// let maxWordIndex = words.length - 1;
-// words[currentWordIndex].style.opacity = "1";
+            <div class="TimelineContainer">
 
-// let rotateText = () => {
-//   let currentWord = words[currentWordIndex];
-//   let nextWord =
-//     currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
-//   // rotate out letters of current word
-//   Array.from(currentWord.children).forEach((letter, i) => {
-//     setTimeout(() => {
-//       letter.className = "letter out";
-//     }, i * 80);
-//   });
-//   // reveal and rotate in letters of next word
-//   nextWord.style.opacity = "1";
-//   Array.from(nextWord.children).forEach((letter, i) => {
-//     letter.className = "letter behind";
-//     setTimeout(() => {
-//       letter.className = "letter in";
-//     }, 340 + i * 80);
-//   });
-//   currentWordIndex =
-//     currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
-//  };
+                <div class="timelineBlock timelineBlockRight">
+                   <div class="marker"></div>
+                   <div class="hidden timelineContent">
+                      <h3>Paris 'N Friends Co</h3>
+                      <p>We have created the attachable gymbag for students on the go. 
+                        Stratagym is the way to go for students looking for the a better way to carry all their gym items.
+                      </p>
+                   </div>
+                </div>
+             
+                <div class="timelineBlock timelineBlockLeft">
+                   <div class="marker"></div>
+                   <div class="hidden timelineContent">
+                      <h3>Attachment</h3>
+                      <p>the Statagym bag attaches to the bottom or back of your backpack through buckles and loops</p>
+                      <!-- <img src="../about/assets/stratagymPhoto1.jpeg"> -->
+                   </div>
+                </div>
+             
+                <div class="timelineBlock timelineBlockRight">
+                   <div class="marker"></div>
+                   <div class="hidden timelineContent">
+                      <h3>Spacious</h3>
+                      <p>Has open space and additional compartments for clothes</p>
+                   </div>
+                </div>
+             
+                <div class="timelineBlock timelineBlockLeft">
+                   <div class="marker"></div>
+                   <div class="hidden timelineContent">
+                      <h3>Features</h3>
+                      <p>Zippers for easy closing</p>
+                   </div>
+                </div>
+             </div>
 
-// rotateText();
-// setInterval(rotateText, 3000);
-
-// console.log();
-        </script>
+            
 
         <!-- Meet the team -->
         <div id="theteambox">
@@ -140,27 +184,54 @@
             <div class="teamflex">
                 <div class="profilebox">
                     <img class="profile" src="khalil.jpg">
-                    <br><br><strong>Khalil</strong><br><i>MMA, Weights</i>
+                    <br><br><strong>Khalil | CTO</strong><br><i>MMA, Weights</i>
+                    <br><hr>
+                    <i>
+                        Khalil is an innovative strategic advisor and has worked with multiple brands throughout his career.
+                    </i>
                 </div>
                 <div class="profilebox">
                     <img class="profile" src="paris.jpg">
-                    <br><br><strong>Paris</strong><br><i>Volleyball, Track</i>
+                    <br><br><strong>Paris | COO</strong><br><i>Volleyball, Track</i>
+                    <br><hr>
+                    <i>
+                        Paris is a content design strategist that has written, produced, and created publications for various initiatives.
+                    </i>
                 </div>
                 <div class="profilebox">
                     <img class="profile" src="tara.jpg">
-                    <br><br><strong>Tara</strong><br><i>Archery, Gym</i>
+                    <br><br><strong>Tara | CFO</strong><br><i>Archery, Gym</i>
+                    <br><hr>
+                    <i>
+                        Tara is a 3D modeling expert that has worked on and led numerous projects on human-centered design and problem-solving.
+                    </i>
                 </div>
                 <div class="profilebox">
                     <img class="profile" src="allison.jpg">
-                    <br><br><strong>Allison</strong><br><i>Basketball, Table Tennis</i>
+                    <br><br><strong>Allison | CEO</strong><br><i>Basketball, Table Tennis</i>
+                    <br><hr>
+                    <i>
+                        Allison is a product designer that has years of experience creating innovative designs.
+                    </i>
+                    
+
                 </div>
                 <div class="profilebox">
                     <img class="profile" src="sama.jpg">
-                    <br><br><strong>Sama</strong><br><i>Dance, Tennis</i>
+                    <br><br><strong>Sama | CPO</strong><br><i>Dance, Tennis</i>
+                    <br><hr>
+                    <i>
+                        Sama is a seasoned creative producer that has led and worked amongst teams to bring large-scale projects to life.
+                    </i>
                 </div>
                 <div class="profilebox">
                     <img class="profile" src="hope.jpg">
-                    <br><br><strong>Hope</strong><br><i>Basketball, Swimming</i>
+                    <br><br><strong>Hope | CMO</strong><br><i>Basketball, Swimming</i>
+                    <br><hr>
+                    <i>
+                        Hope is a sustainability expert that has worked with hundreds of materials to optimize products. 
+                    </i>
+
                 </div>
             </div>
         
@@ -170,8 +241,9 @@
          <div class="footer">
             <div class="footerContent">
                 <div class="footertext">
-                    <a href="">stratagym@usc.edu</a> <br/>
+                    <a href="">stratagym@usc.edu</a> <br/> <br/>
                     <a href="https://instagram.com/_stratagym">Instagram</a> <br />
+                    <a href="../businessplan/businessplan.html">Business Strategy</a> <br />
                     <a href="../teamAbout/about.html">Design Team</a>
                 </div>
                 <div>

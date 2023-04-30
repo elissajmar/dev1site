@@ -2,6 +2,28 @@ body {
     background-color: var(--grey);
 }
 
+.colorbtn{
+    height: 25px;
+    width: 75px;
+    border-radius: 10px;
+    background-color: #E94F1D;
+    color: white;
+    text-align: center;
+    font-size: 8px;
+    padding-top: 1%;
+    cursor: pointer;
+    transition: 0.3s;
+    top: 94%;
+    position: absolute;
+    left: 94%;
+}
+
+.colorbtn:hover {
+    background-color: white;
+    color: #E94F1D;
+}
+
+
 .screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
     width: 100%;
     height: 100vh;
@@ -67,7 +89,7 @@ h1 {
 }
 
 /* Features section */
-.features {
+/* .features {
     background-color: var(--orange);
 
     color:white;
@@ -87,7 +109,80 @@ h1 {
 
 .featureImg {
     width: 200px;
+    height: 100%;
+} */
+
+
+.fullDiagram{
+    margin: auto;
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--grey);
 }
+
+.bagImg img{
+    width: 50%;
+}
+
+
+.topArrows{
+    height: 7vw;
+}
+
+
+#leftArrow{
+    position: absolute;
+    width: 21vw;
+    left: 33.5vw;
+    opacity:0.0;
+}
+
+#rightArrow{
+    position: absolute;
+    width: 26vw;
+    left: 35.25vw;
+    opacity:0.0;
+}
+
+
+#zipperArrow{
+    position: absolute;
+    width: 22vw;
+    left: 74vw;
+    opacity:0.0;
+}
+
+#bottomArrow{
+    position: absolute;
+    width: 28vw;
+    left: 13vw;
+    opacity:0.0;
+}
+
+
+.space{
+    height: 3vw;
+}
+
+.changingText{
+    height: 14vw;
+    line-height: 14vw;
+    font-size: 7rem;
+    font-family: Compacta;
+    padding-bottom: 2vw;
+
+}
+
+/* .bagImg {
+    width: 100vw; 
+    height: 76vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 
 /*Socials section*/
 .social{
@@ -108,7 +203,31 @@ h1 {
 }
 
 
-/* TABLET/MOBILE RESIZING */
+
+/* RESIZING */
+
+@media screen and (max-width: 1170px){
+    .noLineHeight {
+        line-height: 100%;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 980px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 80vh;
+    }
+}
+
+/* MOBILE */
 @media screen and (max-width: 760px){
     .section {
         padding-top: 80px;
@@ -139,8 +258,9 @@ h1 {
         width: 47%;
     }
 
-    .noLineHeight {
-        line-height: 100%;
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 100vh;
     }
 }
 

@@ -1,0 +1,177 @@
+body {
+    background-color: black;
+}
+
+.colorbtn{
+    height: 25px;
+    width: 75px;
+    border-radius: 10px;
+    background-color: #E94F1D;
+    color: white;
+    text-align: center;
+    font-size: 8px;
+    padding-top: 1%;
+    cursor: pointer;
+    transition: 0.3s;
+    top: 94%;
+    position: absolute;
+    left: 94%;
+}
+
+.colorbtn:hover {
+    background-color: white;
+    color: #E94F1D;
+}
+
+
+.screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
+    width: 100%;
+    height: 100vh;
+}
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+#nanogallery2 {
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #DEDAD6;
+}
+
+.hero img {
+    width: 50%; 
+}
+
+h1 {
+    line-height: 100%;
+}
+
+.noLineHeight {
+    line-height: 0;
+    color: #DEDAD6;
+}
+
+/* Black image section */
+.image {
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    text-align: right;
+}
+
+.image img {
+    width: 100%;
+    opacity: 30%;
+}
+
+.text{
+    height: 100vh;
+    width: 90%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.text h3 {
+    color: white;
+}
+
+/* Features section */
+.features {
+    background-color: var(--orange);
+
+    color: #E94F1D;
+    border: solid;
+    border-color: #E94F1D;
+    border-width: 8px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature {
+    display: flex;
+    gap: 120px;
+}
+
+.feature h2{
+    line-height: 0;
+}
+
+.featureImg {
+    width: 200px;
+}
+
+/*Socials section*/
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: 
+}
+
+.feed{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feed img{
+    width: 23%;
+}
+
+.navLabel{
+    color: white;
+}
+
+/* TABLET/MOBILE RESIZING */
+@media screen and (max-width: 760px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* IMAGE */
+    .image img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* FEATURES */
+    .features { 
+        gap: 80px;
+    }
+
+    .feature{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    /* INSTA FEED */
+
+    .feed img{
+        width: 47%;
+    }
+
+    .noLineHeight {
+        line-height: 100%;
+    }
+}
+
+

@@ -3,6 +3,7 @@ $(document).ready(function(){
     cart = getCart(); 
     totalPrice = calculateTotal(cart)
     printCart(cart, totalPrice)
+    promoCode = false;
 
     function getCart(){ // gets cart from localStorage and parses it
         if (localStorage.getItem("cart")){
@@ -17,7 +18,6 @@ $(document).ready(function(){
     function setCart (cart){ // stores cart in localStorage 
         localStorage.setItem("cart", JSON.stringify(cart))
     }
-
 
     function calculateTotal(cart){
         totalPrice = 0
@@ -86,20 +86,25 @@ $(document).ready(function(){
 
 
     $("#applyPromo").click(function() {
-        applyPromo(cart)
+        if (promoCode == true){ //validate for whether promo already exists
+            alert("A promo code is already active!")
+        }
 
-        $("#promoSummary").append("BAG20") //add promo code to cart summary
+        else {
+            applyPromo(cart)
+            $("#promoSummary").html("Promo Code: BAG20") //add promo code to cart summary
+        }
     })
 
     function applyPromo(cart){
         totalPrice = calculateTotal(cart); 
-        if ($("#promoCode").val().toUpperCase() == "BAG20"){
+        if ($("#promoCode").val().toUpperCase() == "BAG20"){ //remove case sensitivity
             totalPrice -= totalPrice * 0.20 
         }
+        promoCode = true;
 
         printCart(cart, totalPrice)
     }
-
 
     // PAY WITH VENMO
     $(".link").click(function(){
