@@ -1,28 +1,70 @@
 body {
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-top: 120px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px;
+    background-color: var(--grey);
 }
 
 img{
-    width: 200px;
-    border-radius: 10px;
+    border-radius: 20px 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
-h1{
-    color: rgb(209, 9, 126);
+
+h2{
+    margin-bottom: 50px;
 }
 
-.member {
-    width: 60%;
-    padding: 40px;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     background-color: var(--grey);
-    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    padding-bottom: 3vw;
+}
+
+.grid-item {
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: background-position 0.5s ease-in-out;
+    border: 0px solid rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+    font-size: 1.5vw;
+    font-family: Neue Haas Grotesk;
+    text-align: center;
+    height: 50vw;
+}
+
+.pfp{
+    position: relative;
+    height:30vh;
+    width: 70%;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+.grid-item a{
+    color: white;
+}
+
+
+#grid-heading{
+    font-family: Compacta;
+    font-size: 4vw;
+    color: var(--orange);
+}
+
+.skillsBox{
+    text-align: left;
+    font-family: Neue Haas Grotesk;
+    font-size: 1.35vw;
+    width: 23vw;
+    margin: auto;
 }
