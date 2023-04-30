@@ -14,21 +14,22 @@
     </head>
     <body>
         <!-- PRELOADER -->
-        <!-- <div id="preloader">
+        <div id="preloader">
             <video autoplay muted loop>
-                <source src="../stratagymLogo.mp4" type="video/mp4">
+                <source src="../strataAnimation.mp4" type="video/mp4">
             </video>
         </div>
         <script>
             //PRELOADER
+            document.querySelector('video').playbackRate = 3.0
             var loader = document.getElementById("preloader");
             window.addEventListener("load", function(){
                 setTimeout(() => {
                     loader.style.display = "none";
-                }, 2800);
+                }, 1800);
 
             })
-        </script> -->
+        </script>
 
         <!-- NAVBAR -->
         <div class="nav">
