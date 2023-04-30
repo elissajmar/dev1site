@@ -90,20 +90,66 @@ h1 {
     height: 100%;
 } */
 
-/* diagram */
-.topspace{
-    padding-bottom: 8vw;
+.fullDiagram{
+    margin: auto;
+    text-align: center;
     background-color: var(--orange);
+    color: var(--grey);
 }
-.diagram{
+
+.bagImg {
+    width: 100vw; 
+    height: 76vw;
+    display: flex;
+    justify-content: center;
+}
+
+.bagImg img{
+    width: 56vw;
+    align-self: center;
+}
+
+area:hover{
+    /* -webkit-filter: 
+
+    drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px 2px 0 white)
+    drop-shadow(2px -2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+
+    filter: 
+        drop-shadow(2px 2px 0 white)
+        drop-shadow(-2px 2px 0 white)
+        drop-shadow(2px -2px 0 white)
+        drop-shadow(-2px -2px 0 white); */
+
+    border: 1px solid white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .diagram{
     position: relative;
     margin: auto;
     background-image: url("assets/bag.png");
-    background-size: contain;
+    background-color: green;
+    background-size: 56vw;
     background-repeat: no-repeat;
-    background-position: center;
-    width: 60vw;
-    height: 54vw;
+    background-position: center bottom 13vw;
+    height: 76vw;
 }
 
 .topImages{
@@ -126,11 +172,25 @@ h1 {
         drop-shadow(-2px 2px 0 white)
         drop-shadow(2px -2px 0 white)
         drop-shadow(-2px -2px 0 white);
-}
+} 
 
+ #arrowRight{
+    width: 30vw;
+    top: 100vw;
+
+}
+#arrowLeft{
+
+}
+#arrowWaterproof{
+
+}
+#arrowZipper{
+
+}
 #leftBuck{
     width: 13.75vw;
-    top: 6.25vw;
+    top: 8vw;
     left: 14.25vw;
 }
 #rightBuck{
@@ -139,7 +199,7 @@ h1 {
     left: 34vw;
 }
 #zipper{
-    width: 60vw;
+    width: 40vw;
     top: 26vw;
     right: 0vw;
 }
@@ -157,7 +217,7 @@ h1 {
     background-color: var(--orange);
     color: var(--grey);
     width: 100vw;
-}
+} */
 
 
 
