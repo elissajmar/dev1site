@@ -182,7 +182,30 @@ h1 {
 
 
 
-/* TABLET/MOBILE RESIZING */
+/* RESIZING */
+
+@media screen and (max-width: 1170px){
+    .noLineHeight {
+        line-height: 100%;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 980px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 80vh;
+    }
+}
+
+/* MOBILE */
 @media screen and (max-width: 760px){
     .section {
         padding-top: 80px;
@@ -213,8 +236,9 @@ h1 {
         width: 47%;
     }
 
-    .noLineHeight {
-        line-height: 100%;
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 100vh;
     }
 }
 

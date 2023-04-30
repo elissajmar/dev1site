@@ -37,13 +37,12 @@ a {
     font-weight: bold;
 }
 
-.heading:hover {
-    color: var(--orange);
+#research{
+    width: 700px;
 }
 
-video {
-    width: 300px;
-    border-radius: 20px;
+.heading:hover {
+    color: var(--orange);
 }
 
 .ask {
@@ -54,3 +53,17 @@ video {
 .ask:hover {
     color: var(--orange);
 }
+
+/* TABLET/MOBILE RESIZING */
+@media screen and (max-width: 900px){
+    #research {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    #research {
+        width: 400px;
+    }
+}
+

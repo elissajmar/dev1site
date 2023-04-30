@@ -271,6 +271,7 @@ input[type=text]::placeholder{
 
 /* MOBILE RESIZING */
 @media screen and (max-width: 760px){
+
     /*FONT RESIZING*/
     h1 {
         font-size: 10rem;
@@ -297,8 +298,25 @@ input[type=text]::placeholder{
         padding-right: 20px;
     }
 
+    /*NAV RESIZING*/
+
     .nav {
         gap: 10px;
     }
     
 }
+
+@media screen and (max-width: 600px){
+    .logo { /*Gets rid of logo*/
+        display: none;
+    }
+    
+    .nav {
+        gap: 10px;
+    }
+
+    .navSection {
+        display: flex;
+        gap: 10px;
+    }
+}   
