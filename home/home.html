@@ -10,6 +10,10 @@
         <!--Adding jQuery and scripting-->
         <script src="http://code.jquery.com/jquery.js"></script> 
         <script src="../main.js"></script>
+        <!-- responsive image map script -->
+        <script src="../mapresizer.js"></script>
+        
+
 
     </head>
     <body>
@@ -17,16 +21,17 @@
         <!-- PRELOADER -->
         <div id="preloader">
             <video autoplay muted loop>
-                <source src="../stratagymLogo.mp4" type="video/mp4">
+                <source src="../strataAnimation.mp4" type="video/mp4">
             </video>
         </div>
         <script>
             //PRELOADER
+            document.querySelector('video').playbackRate = 3.0
             var loader = document.getElementById("preloader");
             window.addEventListener("load", function(){
                 setTimeout(() => {
                     loader.style.display = "none";
-                }, 2800);
+                }, 1800);
 
             })
 
@@ -41,6 +46,62 @@
             }
 
         </script>
+        
+        <!-- INTERACTIVE DIAGRAM -->
+        <script>
+            $(document).ready(function(){
+                $("#leftbuckle").mouseover(function(){
+                    $('#bagDiagram').attr('src', 'assets/bagLeftHighlight.png');
+                    $("#leftArrow").css("opacity", "1.0");
+                    $(".changingText").html("<u>ADJUSTABLE.</u>");
+                });
+                $("#leftbuckle").mouseout(function(){
+                    setTimeout(function() {
+                        $("#bagDiagram").attr("src", "assets/bag smaller.png");
+                    }, 150);
+                    $("#leftArrow").fadeTo(150, 0);
+                });
+
+                $("#rightbuckle").mouseover(function(){
+                    $('#bagDiagram').attr('src', 'assets/bagRightHighlight.png');
+                    $("#rightArrow").css("opacity", "1.0");
+                    $(".changingText").html("<u>ADJUSTABLE.</u>");
+                });
+                $("#rightbuckle").mouseout(function(){
+                    setTimeout(function() {
+                        $("#bagDiagram").attr("src", "assets/bag smaller.png");
+                    }, 150);
+                    $("#rightArrow").fadeTo(150, 0);
+                });
+
+                $("#zipper").mouseover(function(){
+                    $('#bagDiagram').attr('src', 'assets/bagZipperHighlight.png');
+                    $("#zipperArrow").css("opacity", "1.0");
+                    $(".changingText").html("<u>SPACIOUS.</u>");
+                });
+                $("#zipper").mouseout(function(){
+                    setTimeout(function() {
+                        $("#bagDiagram").attr("src", "assets/bag smaller.png");
+                    }, 150);
+                    $("#zipperArrow").fadeTo(150, 0);
+
+                });
+
+                $("#bottom").mouseover(function(){
+                    $('#bagDiagram').attr('src', 'assets/bagOuterHighlight.png');
+                    $("#bottomArrow").css("opacity", "1.0");
+                    $(".changingText").html("<u>WATERPROOF.</u>");
+                });
+                $("#bottom").mouseout(function(){
+                    setTimeout(function() {
+                        $("#bagDiagram").attr("src", "assets/bag smaller.png");
+                    }, 150);
+                    $("#bottomArrow").fadeTo(150, 0);
+                });
+
+            });
+        </script>
+
 
         <div class="colorbtn">
             COLOR MODE
@@ -60,7 +121,6 @@
                 <a class="navLabel underline" href="../about/about.html">ABOUT</a>
 
                 <a class="navLabel underline" href="../contact/contact.html">CONTACT</a>
-
             </div>
         
             <div class="navSection">
@@ -79,44 +139,44 @@
                 <h1> GYM ON <br />
                 THE GO </h1>
             </div>
-
             
 
             <!-- IMAGE DESCRIPTION SECTION -->
             <div class="image screenSizeSection">
                 <div class="text">
-                    <h3>AT STRATAGYM, WE BELIEVE <br /> THAT CONVENIENCE AND <br/> COMFORT GO HAND IN HAND.</h3>
+                    <h3>AT <span class="orange">STRATAGYM</span>, WE BELIEVE <br /> THAT CONVENIENCE AND <br/> COMFORT GO HAND IN HAND.</h3>
                 </div>
                 <img src="assets/gymbg.jpeg" alt="gym bg"> 
             </div>
 
-            <!-- FEATURES SECTION -->
-            <div class="features section">
-                <div class="feature">
-                    <img class="featureImg" src="assets/bag.png" alt="bag">
-                    <div>
-                        <h2>LIGHTWEIGHT</h2>
-                        <p>Our bags are extremely lightweight and portable. You'll hardly feel it on your backpack at all!</p>    
-                    </div>
-                </div>
 
-                <div class="feature">
-                    <img class="featureImg" src="assets/bag.png" alt="bag">
-                    <div>
-                        <h2>ADAPTABLE</h2>
-                        <p>Our bags are extremely lightweight and portable. You'll hardly feel it on your backpack at all!</p>    
-                    </div>
-                </div>
+            <!-- NEW BAG DIAGRAM -->
+            <div class = "fullDiagram">
+                <div class="space"></div>
+                <div class="topArrows">
+                    <img src="assets/left Buckle Strap.png" id="leftArrow">
+                    <img src="assets/right Buckle Strap.png" id="rightArrow">
+                    <img src="assets/Zipperarrow.png" id="zipperArrow">
+                    <img src="assets/Waterproof.png" id="bottomArrow">
 
-                <div class="feature">
-                    <img class="featureImg" src="assets/bag.png" alt="bag">
-                    <div>
-                        <h2>AFFORDABLE</h2>
-                        <p>Our bags are extremely lightweight and portable. You'll hardly feel it on your backpack at all!</p>    
-                    </div>
                 </div>
+                <div class = "bagImg">
+                    <img src="assets/bag smaller.png" usemap="#image_map" id="bagDiagram">
+                        <map name="image_map">
+                        <area alt="left buckle" title="left buckle" coords="260,119 269,109 253,88 252,74 254,66 269,59 289,77 297,96 325,85 358,79 378,70 359,39 358,31 361,22 368,17 380,17 395,31 406,57 418,63 422,62 429,81 419,90 404,101 383,110 370,119 402,139 421,147 410,208 410,221 404,228 365,244 330,241 313,236 294,228 275,228 267,234 229,232 225,232 221,153 222,145 222,145 228,139 248,138 268,139 283,141 259,120 " shape="polygon" id="leftbuckle">
+                        <area alt="right buckle" title="right buckle" coords="540,91 538,76 553,67 559,51 573,44 597,50 639,67 653,68 662,79 683,84 694,74 705,65 720,61 731,77 715,98 711,102 709,104 703,123 728,142 748,140 765,145 752,208 746,221 709,225 679,217 665,208 618,189 607,180 601,175 575,159 549,162 540,159 534,149 534,144 545,127 559,103 568,92 539,96 540,90 " shape="polygon" id="rightbuckle">
+                        <area alt="zipper" title="zipper" coords="46,339 97,353 149,350 231,358 331,361 441,365 528,372 596,370 685,368 753,361 868,350 897,333 913,323 916,345 901,389 866,416 828,429 698,442 605,446 547,448 470,446 383,442 339,438 281,435 237,434 178,432 137,432 107,430 87,414 70,398 49,364 47,340 " shape="polygon" id="zipper">
+                        <area alt="bottom" title="bottom" coords="98,520,892,657" shape="rect" id="bottom">
+                        </map>
+              </div>
+
+              <div class="space"></div>
+              <div class="changingText">
+                STRATAGYM.
+              </div>
+
             </div>
-        
+
             <!-- SOCIALS SECTION -->
             <div class="social section">
                 <h2 class="noLineHeight">STAY UP TO DATE <span style="color: var(--orange); opacity: 60%;">@_STRATAGYM</span> </h2>
@@ -142,7 +202,7 @@
             <div class="footer">
                 <div class="footerContent">
                     <div class="footertext">
-                        <a href="">stratagym@usc.edu</a> <br/>
+                        <a href="">stratagym@usc.edu</a> <br/> <br/>
                         <a href="https://instagram.com/_stratagym">Instagram</a> <br />
                         <a href="../businessplan/businessplan.html">Business Strategy</a> <br />
                         <a href="../teamAbout/about.html">Design Team</a>
@@ -196,6 +256,10 @@
         </script>
 
     </body>
-
-
+    <script>
+        $(document).ready(function() {
+            $('map').imageMapResize();
+         });
+    </script>
+    
 </html>
