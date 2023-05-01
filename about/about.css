@@ -145,12 +145,13 @@ h5{
     clear: both;
     margin-top: 8px;
 }
+
 .right{
     text-align: right;
     float: right;
     display: none;
-
 }
+
 .left{
     text-align: left;
     float: left;

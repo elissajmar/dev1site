@@ -56,7 +56,8 @@
 
     //function that does the chat interface
     function chatBot() {
-  
+      
+      $("#holdon").play();
       $("#chatBoxFlex").delay().fadeIn(100);
       $("#chatBoxFlex").animate({"height": "100px"}, 100);
       $(".one").delay(100).fadeIn();
