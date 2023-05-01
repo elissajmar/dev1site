@@ -1,7 +1,9 @@
  $(document).ready(function() {
 
-  chatBot(); //run chat bot animation
-
+  $("#startButton").click(function(){
+    chatBot(); //run chat bot animation
+    console.log("clicked")
+  })
 
   let words = document.querySelectorAll(".animationIntro");
   words.forEach((word) => {
@@ -54,38 +56,78 @@
       // .animate({"font-size": "5em"});
     }
 
-    //function that does the chat interface
+  //$("#holdon").play();
+
+  
+
+  function audioPlay(src){
+    let x = document.createElement("audio");
+    x.setAttribute("src", src);
+    x.setAttribute("autoplay", "autoplay");
+    x.setAttribute('type', 'audio/mpeg');
+    $("#chatBox").append(x);
+    console.log("played");
+  }
+
+    //function that does the full animation
     function chatBot() {
-      
-      $("#holdon").play();
+      $("#chatBox").css("display", "block")
+      $("#startButton").css("display", "none")
+      audioPlay("assets/Hold-on.mp3")
       $("#chatBoxFlex").delay().fadeIn(100);
-      $("#chatBoxFlex").animate({"height": "100px"}, 100);
+      $("#chatBoxFlex").animate({"height": "100px"}, 100);   
       $(".one").delay(100).fadeIn();
       $(".two").delay(2000).fadeIn();
+      setTimeout(() => {
+        audioPlay("assets/Well.mp3");
+      }, 2400);
       $("#chatBoxFlex").delay(1800).animate({"height": "170px"}, 100);
       $(".three").delay(4000).fadeIn();
+      setTimeout(() => {
+        audioPlay("assets/Great.mp3");
+      }, 4000);
       $("#chatBoxFlex").delay(1800).animate({"height": "240px"}, 100);
       $(".four").delay(6000).fadeIn();
+      setTimeout(() => {
+        audioPlay("assets/Lets-get.mp3");
+      }, 6000);
       $("#chatBoxFlex").delay(1800).animate({"height": "310px"}, 100);
       $("#chatBoxFlex").delay(1800).animate({"opacity": "0%"}, 100);
 
       //bag
+      setTimeout(() => {
+        audioPlay("assets/So-whats-the-story.mp3");
+      }, 8800);
+      setTimeout(() => {
+        audioPlay("assets/This-is-allison.mp3");
+      }, 11000);
       $("#img1").delay(8800).animate({"opacity": "100%"}, 100)
                 .delay(2000).animate({"opacity": "0%"}, 100)
+                
                 
       $("#text1").delay(8800).animate({"opacity": "100%"}, 100)
                  .delay(2000).animate({"opacity": "0%"}, 100)
       
+                 
       //allison
       $("#img2").delay(11000).animate({"opacity": "100%"}, 100)
                 .delay(3000).animate({"left": "100px","opacity": "30%"}, 100)
                 .delay(10000).animate({"left": "0px", "opacity": "0%"}, 100)
       
       //frisbee
+      setTimeout(() => {
+        audioPlay("assets/She-says.mp3");
+      }, 19000);
+      setTimeout(() => {
+        audioPlay("assets/So-she-formed-a-team.mp3");
+      }, 26000);
+      setTimeout(() => {
+        audioPlay("assets/meet paris.mp3");
+      }, 31000);
       $("#img3").delay(15000).animate({"opacity": "100%"}, 100)
                 .delay(9000).animate({"left": "80px", "opacity": "30%"}, 300)
                 .delay(7000).animate({"opacity": "0%"}, 100) //disappears
-              
+      
       $("#text2").delay(11000).animate({"opacity": "100%"}, 100)
                  .delay(8000).animate({"opacity": "30%"}, 100)
                  .delay(5000).animate({"left": "260px"}, 100)
