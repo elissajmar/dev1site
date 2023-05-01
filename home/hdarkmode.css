@@ -23,6 +23,10 @@ body {
     color: #E94F1D;
 }
 
+.navLabel {
+    color: #decad6;
+}
+
 
 .screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
     width: 100%;
@@ -46,7 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #DEDAD6;
+    color: #dedad6
 }
 
 .hero img {
@@ -59,7 +63,7 @@ h1 {
 
 .noLineHeight {
     line-height: 0;
-    color: #DEDAD6;
+    color:#dedad6;
 }
 
 /* Black image section */
@@ -90,14 +94,11 @@ h1 {
 }
 
 /* Features section */
-.features {
+/* .features {
     background-color: var(--orange);
 
-    color: #E94F1D;
-    border: solid;
-    border-color: #E94F1D;
-    border-width: 8px;
-    background-color: black;
+    color:white;
+
     display: flex;
     flex-direction: column;
 }
@@ -113,14 +114,89 @@ h1 {
 
 .featureImg {
     width: 200px;
+    height: 100%;
+} */
+
+
+.fullDiagram{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    color: var(--grey);
+    border: solid;
+    border-width: 20px;
+    border-color: #E94F1D;
 }
+
+.bagImg img{
+    width: 50%;
+}
+
+
+.topArrows{
+    height: 7vw;
+}
+
+
+#leftArrow{
+    position: absolute;
+    width: 21vw;
+    left: 33.5vw;
+    opacity:0.0;
+}
+
+#rightArrow{
+    position: absolute;
+    width: 26vw;
+    left: 35.25vw;
+    opacity:0.0;
+}
+
+
+#zipperArrow{
+    position: absolute;
+    width: 22vw;
+    left: 74vw;
+    opacity:0.0;
+}
+
+#bottomArrow{
+    position: absolute;
+    width: 28vw;
+    left: 13vw;
+    opacity:0.0;
+}
+
+
+.space{
+    height: 3vw;
+}
+
+.changingText{
+    height: 14vw;
+    line-height: 14vw;
+    font-size: 7rem;
+    font-family: Compacta;
+    padding-bottom: 2vw;
+
+}
+
+/* .bagImg {
+    width: 100vw; 
+    height: 76vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 
 /*Socials section*/
 .social{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: 
 }
 
 .feed{
@@ -134,11 +210,32 @@ h1 {
     width: 23%;
 }
 
-.navLabel{
-    color: white;
+
+
+/* RESIZING */
+
+@media screen and (max-width: 1170px){
+    .noLineHeight {
+        line-height: 100%;
+    }
 }
 
-/* TABLET/MOBILE RESIZING */
+/* TABLET */
+@media screen and (max-width: 980px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 80vh;
+    }
+}
+
+/* MOBILE */
 @media screen and (max-width: 760px){
     .section {
         padding-top: 80px;
@@ -169,8 +266,9 @@ h1 {
         width: 47%;
     }
 
-    .noLineHeight {
-        line-height: 100%;
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 100vh;
     }
 }
 
