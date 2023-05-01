@@ -332,6 +332,29 @@ h5{
  }
 
 
+ .image-container {
+    display: flex;
+    justify-content: center; /* centers images horizontally */
+    align-items: center; /* centers images vertically */
+    margin-top: 0;
+    margin-bottom: 2vw;
+
+  }
+  
+  .image-container img {
+    margin: 0 10px; /* adds horizontal spacing between images */
+    width: 18vw;
+  }
+
+  #description{
+    text-align: center;
+    margin-bottom: 10vw;
+    font-size: 2vw;
+
+  }
+
+
+
 @media screen and (max-width: 760px){
 
     #bigpicture {
