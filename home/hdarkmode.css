@@ -13,9 +13,11 @@ body {
     padding-top: 1%;
     cursor: pointer;
     transition: 0.3s;
-    top: 94%;
+    top: 90%;
+    left: 90%;
+    
     position: absolute;
-    left: 94%;
+  
 }
 
 .colorbtn:hover {

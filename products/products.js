@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
 
     let bottomBag = {
-        "name": "The Bottom Bag",
+        "name": "Buckle Attachment",
         "price": 49.99,
     }
 

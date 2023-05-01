@@ -37,12 +37,12 @@
 
             //MODE FETCHING
             if (localStorage.getItem("mode") == "dark"){
-                document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode    
-                console.log("Set to dark mode")
+                document.getElementById("mode").setAttribute("href", "hdarkmode.css"); //change to dark mode    
+                
             }
             else if (localStorage.getItem("mode") == "light"){
-                document.getElementById("mode").setAttribute("href", "home.css");  //change to dark mode    
-                console.log("Set to light mode")
+                document.getElementById("mode").setAttribute("href", "home.css");  //change to light mode    
+            
             }
 
         </script>
@@ -234,23 +234,17 @@
                 if (localStorage.getItem("mode")==null) { //if no mode has been set
                     localStorage.setItem("mode", "dark");
                     document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode
-                    console.log(localStorage.getItem("mode"))
+                    
                 }
                 
                 else if(localStorage.getItem("mode") == "dark") { //if dark mode is selected 
                     document.getElementById("mode").setAttribute("href", "home.css");  //change to light mode
                     localStorage.setItem("mode", "light") //set mode to light in localStorage
-                    
-                    console.log("Mode is now: " + localStorage.getItem("mode"))
-                    console.log("Mode was dark")
                 }
 
                 else if (localStorage.getItem("mode") == "light"){ //if light mode is selected 
                     document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode
                     localStorage.setItem("mode", "dark") //set mode to dark in localStorage
-                    
-                    console.log("Mode is now: " + localStorage.getItem("mode"))
-                    console.log("Mode was light")
                 }
             });
         </script>
