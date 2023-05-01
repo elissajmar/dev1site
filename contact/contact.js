@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
-    var imgs = document.querySelectorAll('.slider img');
-    var dots = document.querySelectorAll('.dot');
-    var currentImg = 0; // index of the first image 
-    const interval = 3000; // duration(speed) of the slide
+   
+    $("#submit").click(function() {
+       
 
-    function changeSlide(n) {
-        for (var i = 0; i < imgs.length; i++) { // reset
-        imgs[i].style.opacity = 0;
-        dots[i].className = 'dots';
+        if ($("input").val() == ""){
+              $("input").css("border", "2px solid red"); 
+              alert("Please fill out empty boxes!")
+        }else{
+            location.reload()
+            alert("Submitted! Thank you for your message, our team will get back to you in 48 hours.")
         }
+    })
+
+
     
-        currentImg = n;
-    
-        imgs[currentImg].style.opacity = 1;
-        dots[currentImg].className += ' active';
-    }
+
 })
