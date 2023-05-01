@@ -2,6 +2,28 @@ body {
     background-color: var(--grey);
 }
 
+.colorbtn{
+    height: 25px;
+    width: 75px;
+    border-radius: 10px;
+    background-color: #E94F1D;
+    color: white;
+    text-align: center;
+    font-size: 8px;
+    padding-top: 1%;
+    cursor: pointer;
+    transition: 0.3s;
+    top: 94%;
+    position: absolute;
+    left: 94%;
+}
+
+.colorbtn:hover {
+    background-color: white;
+    color: #E94F1D;
+}
+
+
 .screenSizeSection { /* Defines a section as tall and wide as the screen viewport. Should be used for the home "header" section only */
     width: 100%;
     height: 100vh;
@@ -182,7 +204,30 @@ h1 {
 
 
 
-/* TABLET/MOBILE RESIZING */
+/* RESIZING */
+
+@media screen and (max-width: 1170px){
+    .noLineHeight {
+        line-height: 100%;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 980px){
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 80vh;
+    }
+}
+
+/* MOBILE */
 @media screen and (max-width: 760px){
     .section {
         padding-top: 80px;
@@ -213,8 +258,9 @@ h1 {
         width: 47%;
     }
 
-    .noLineHeight {
-        line-height: 100%;
+    /* BAG DIAGRAM */
+    .fullDiagram{
+        height: 100vh;
     }
 }
 

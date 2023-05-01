@@ -38,7 +38,16 @@ h2{
     font-size: 1.5vw;
     font-family: Neue Haas Grotesk;
     text-align: center;
-    height: 50vw;
+    height: 70vw;
+}
+
+
+.grid-item:hover {
+    height: 100vw;
+}
+
+.grid-item:hover .skillsBox{
+    display: block;
 }
 
 .pfp{
@@ -62,6 +71,16 @@ h2{
 }
 
 .skillsBox{
+    display: none;
+    text-align: left;
+    font-family: Neue Haas Grotesk;
+    font-size: 1.35vw;
+    width: 23vw;
+    margin: auto;
+}
+
+.responsibilitiesBox{
+
     text-align: left;
     font-family: Neue Haas Grotesk;
     font-size: 1.35vw;

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         
         <!--STYLESHEETS-->
-        <link rel="stylesheet" href="../main.css"> <!--References the css file for this page specifically -->
-        <link rel="stylesheet" href="home.css"> <!--References the css file for this page specifically -->
+        <link rel="stylesheet" href="../main.css"> <!-- References the css file for this page specifically -->
+        <link id="mode" rel="stylesheet" href="home.css"> <!--References the css file for this page specifically -->
         
         <!--Adding jQuery and scripting-->
         <script src="http://code.jquery.com/jquery.js"></script> 
@@ -17,21 +17,34 @@
 
     </head>
     <body>
+
         <!-- PRELOADER -->
         <div id="preloader">
             <video autoplay muted loop>
-                <source src="../stratagymLogo.mp4" type="video/mp4">
+                <source src="../strataAnimation.mp4" type="video/mp4">
             </video>
         </div>
         <script>
             //PRELOADER
+            document.querySelector('video').playbackRate = 3.0
             var loader = document.getElementById("preloader");
             window.addEventListener("load", function(){
                 setTimeout(() => {
                     loader.style.display = "none";
-                }, 2800);
+                }, 1800);
 
             })
+
+            //MODE FETCHING
+            if (localStorage.getItem("mode") == "dark"){
+                document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode    
+                console.log("Set to dark mode")
+            }
+            else if (localStorage.getItem("mode") == "light"){
+                document.getElementById("mode").setAttribute("href", "home.css");  //change to dark mode    
+                console.log("Set to light mode")
+            }
+
         </script>
         
         <!-- INTERACTIVE DIAGRAM -->
@@ -90,6 +103,10 @@
         </script>
 
 
+        <div class="colorbtn">
+            COLOR MODE
+        </div>
+       
         <!-- NAVBAR -->
         <div class="nav">
             <div class="navSection">
@@ -104,22 +121,26 @@
                 <a class="navLabel underline" href="../about/about.html">ABOUT</a>
 
                 <a class="navLabel underline" href="../contact/contact.html">CONTACT</a>
-
             </div>
         
             <div class="navSection">
                 <a class="navLabel underline" href="../cart/cart.html">CART</a>
             </div>
+
         </div>
 
+        
+
         <div class="body"> <!-- ACTUAL PAGE CONTENT -->
+            
+            
             <!-- HERO SECTION -->
             <div class="hero screenSizeSection">
                 <h1> GYM ON <br />
                 THE GO </h1>
             </div>
-
             
+
             <!-- IMAGE DESCRIPTION SECTION -->
             <div class="image screenSizeSection">
                 <div class="text">
@@ -151,14 +172,14 @@
 
               <div class="space"></div>
               <div class="changingText">
-                LIGHTWEIGHT. <u>ADAPTABLE.</u> AFFORDABLE.
+                STRATAGYM.
               </div>
 
             </div>
 
             <!-- SOCIALS SECTION -->
             <div class="social section">
-                <h2 class="noLineHeight">STAY UP TO DATE <span style="color: var(--orange); opacity: 30%;">@_STRATAGYM</span> </h2>
+                <h2 class="noLineHeight">STAY UP TO DATE <span style="color: var(--orange); opacity: 80%;">@_STRATAGYM</span> </h2>
                 <div class="button">
                     <a href="https://instagram.com/_stratagym"> FOLLOW US </a>
                 </div>
@@ -201,6 +222,39 @@
             </div> <!--End Footer-->
 
         </div> <!-- End Body Div-->
+
+         <!-- Dark & Lightmode -->
+         <script>
+            //localStorage.clear() //clear to test
+            toggle = document.querySelector(".colorbtn");
+            
+            toggle.addEventListener("click", ()=> {
+                console.log("clicked")
+                
+                if (localStorage.getItem("mode")==null) { //if no mode has been set
+                    localStorage.setItem("mode", "dark");
+                    document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode
+                    console.log(localStorage.getItem("mode"))
+                }
+                
+                else if(localStorage.getItem("mode") == "dark") { //if dark mode is selected 
+                    document.getElementById("mode").setAttribute("href", "home.css");  //change to light mode
+                    localStorage.setItem("mode", "light") //set mode to light in localStorage
+                    
+                    console.log("Mode is now: " + localStorage.getItem("mode"))
+                    console.log("Mode was dark")
+                }
+
+                else if (localStorage.getItem("mode") == "light"){ //if light mode is selected 
+                    document.getElementById("mode").setAttribute("href", "hdarkmode.css");  //change to dark mode
+                    localStorage.setItem("mode", "dark") //set mode to dark in localStorage
+                    
+                    console.log("Mode is now: " + localStorage.getItem("mode"))
+                    console.log("Mode was light")
+                }
+            });
+        </script>
+
     </body>
     <script>
         $(document).ready(function() {
