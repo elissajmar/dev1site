@@ -342,12 +342,12 @@ h5{
     position: absolute;
     top: 100px;
     left: 40px;
+    z-index: 200;
  }
 
  #startButton:hover {
     background-color: black;
  }
-
 
 
  @media screen and (max-width: 900px){
