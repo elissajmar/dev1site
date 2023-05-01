@@ -1,8 +1,4 @@
 body {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 60px;
-
     background-color: var(--grey);
 }
 
@@ -16,6 +12,7 @@ img{
 
 h2{
     margin-bottom: 50px;
+    margin-top: 150px;
 }
 
 
@@ -38,13 +35,9 @@ h2{
     font-size: 1.5vw;
     font-family: Neue Haas Grotesk;
     text-align: center;
-    height: 70vw;
 }
 
 
-.grid-item:hover {
-    height: 100vw;
-}
 
 .grid-item:hover .skillsBox{
     display: block;
